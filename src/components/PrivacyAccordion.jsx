@@ -4,9 +4,27 @@ import money from "../assets/privacy-icons/money.png";
 import pill from "../assets/privacy-icons/pill.png";
 import check from "../assets/privacy-icons/check.png";
 import heart from "../assets/privacy-icons/heart.png";
+import elder from "../assets/privacy-icons/elder.png";
+import support from "../assets/privacy-icons/support.png";
+import insurance from "../assets/privacy-icons/insurance.png";
 
 export default function PrivacyAccordion() {
   const [activeIndex, setActiveIndex] = useState(null);
+
+  const getImageForIndex = (index) => {
+    switch (index) {
+      case 0:
+      case 2:
+        return support;
+      case 1:
+      case 3:
+        return insurance;
+      case 4:
+        return elder;
+      default:
+        return support;
+    }
+  };
 
   const accordionItems = [
     {
@@ -51,7 +69,7 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="px-[64px] bg-gradient-to-r from-yellow-200 to-red-400 py-12 grid md:grid-cols-2 gap-8 items-center">
+    <section className="px-[64px] h-screen bg-gradient-to-r from-yellow-200 to-red-500 py-12 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h3 className="font-manrope text-[36px] leading-[46px] tracking-[-0.03em] font-semibold mb-4">
           Fight STIs with Ease and Confidence
@@ -69,11 +87,11 @@ export default function PrivacyAccordion() {
                 className="w-full flex items-center text-left group pt-4 gap-2"
               >
                 {/* Privacy Icon */}
-                <div className="flex-shrink-0 w-6 h-6">
+                <div className="flex items-center justify-center flex-shrink-0 w-[25px] h-[25px]">
                   <img
                     src={item.icon}
                     alt={item.alt}
-                    className="w-[20px] h-[20px] object-contain"
+                    className="w-8 h-8 object-contain"
                   />
                 </div>
 
@@ -87,7 +105,7 @@ export default function PrivacyAccordion() {
                     {item.title}
                   </span>
                   <span
-                    className={`text-2xl transition-all duration-200 ${
+                    className={`text-2xl font-normal transition-all duration-200 ${
                       activeIndex === index
                         ? "rotate-45 text-violet-600"
                         : "rotate-0 text-black"
@@ -112,11 +130,12 @@ export default function PrivacyAccordion() {
         </ul>
       </div>
 
-      <div className="text-center">
-        <div className="w-20 h-20 bg-white mx-auto rounded-full shadow-lg flex items-center justify-center mb-4">
-          <span className="text-3xl">🔒</span>
-        </div>
-        <p className="font-semibold text-xl">Support 24/7</p>
+      <div className="flex items-center justify-center text-center ">
+        <img
+          src={getImageForIndex(activeIndex)}
+          alt="Visual"
+          className="w-auto h-auto transition-all duration-500 ease-in-out"
+        />
       </div>
     </section>
   );

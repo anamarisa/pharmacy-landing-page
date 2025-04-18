@@ -62,7 +62,7 @@ export default function Testimonials() {
   );
 
   return (
-    <div className="my-40">
+    <div className="my-40 h-screen">
       <div className="flex justify-between items-center text-left mx-auto px-[64px]">
         <div>
           <h3 className="font-manrope font-semibold text-[32px] md:text-[36px] leading-[46px] tracking-[-0.03em] text-gray-900">

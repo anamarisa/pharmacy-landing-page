@@ -44,7 +44,7 @@ export default function PrepGuide() {
   ];
 
   return (
-    <section className="p-6 mx-auto text-center my-30 max-w-7xl">
+    <section className="p-6 mx-auto text-center my-30 max-w-7xl h-screen">
       <h3 className="font-manrope mb-4 text-[36px] leading-[46px] tracking-[-0.03em] font-semibold">
         Your Simple Guide to Staying Protected
       </h3>
