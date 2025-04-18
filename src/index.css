@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+
+  --color-primary-blue: #1b15b0;
+  --color-teal-custom: #0490da;
+  --color-accent-yellow: #cde300;
+  --color-neutral: #0a0a0a;
+  --color-violet: #7c3aed;
+  --color-dark-violet: #6a31ce;
+  --color-gray-border: #525252;
+  --color-white-table: #fafafa;
+
+  --color-dark-purple: #2e1065;
+
+  --animate-fade-in: fade-in 2s ease-out forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
