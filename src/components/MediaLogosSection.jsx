@@ -1,3 +1,4 @@
+import React from "react";
 import washingtonTimes from "../assets/logo/washington.png";
 import forbes from "../assets/logo/forbes.png";
 import success from "../assets/logo/success.png";

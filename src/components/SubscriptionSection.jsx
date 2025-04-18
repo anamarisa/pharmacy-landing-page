@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,7 +22,7 @@ export default function SubscriptionSection() {
   };
 
   return (
-    <section className="relative h-[512px] my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
+    <section className="relative px-[64px] h-[512px] my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>

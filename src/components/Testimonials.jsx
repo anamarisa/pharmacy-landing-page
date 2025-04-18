@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import QuoteIcon from "../assets/quote.png";
 import "slick-carousel/slick/slick.css";
@@ -62,7 +63,7 @@ export default function Testimonials() {
 
   return (
     <div className="my-40">
-      <div className="flex justify-between items-center text-left mx-auto w-5/6">
+      <div className="flex justify-between items-center text-left mx-auto px-[64px]">
         <div>
           <h3 className="font-manrope font-semibold text-[32px] md:text-[36px] leading-[46px] tracking-[-0.03em] text-gray-900">
             Life-Changing Stories from Our Users

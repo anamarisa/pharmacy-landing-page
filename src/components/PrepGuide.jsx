@@ -1,3 +1,4 @@
+import React from "react";
 import consultIcon from "../assets/icons/plus.png";
 import prescribedIcon from "../assets/icons/pill.png";
 import routineIcon from "../assets/icons/stickman.png";

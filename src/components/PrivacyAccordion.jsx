@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import frame from "../assets/privacy-icons/frame.png";
 import money from "../assets/privacy-icons/money.png";
 import pill from "../assets/privacy-icons/pill.png";
@@ -51,7 +51,7 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-yellow-200 to-red-400 py-12 px-32 grid md:grid-cols-2 gap-8 items-center">
+    <section className="px-[64px] bg-gradient-to-r from-yellow-200 to-red-400 py-12 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h3 className="font-manrope text-[36px] leading-[46px] tracking-[-0.03em] font-semibold mb-4">
           Fight STIs with Ease and Confidence
@@ -70,33 +70,43 @@ export default function PrivacyAccordion() {
               >
                 {/* Privacy Icon */}
                 <div className="flex-shrink-0 w-6 h-6">
-                  <img 
-                    src={item.icon} 
+                  <img
+                    src={item.icon}
                     alt={item.alt}
                     className="w-[20px] h-[20px] object-contain"
                   />
                 </div>
-                
+
                 {/* Title and Toggle */}
                 <div className="flex-grow flex justify-between items-center">
-                  <span className={`font-semibold text-[24px] leading-[32px] tracking-[-0.03em] transition-colors ${
-                    activeIndex === index ? 'text-violet-600' : 'text-black'
-                  }`}>
+                  <span
+                    className={`font-semibold text-[24px] leading-[32px] tracking-[-0.03em] transition-colors ${
+                      activeIndex === index ? "text-violet-600" : "text-black"
+                    }`}
+                  >
                     {item.title}
                   </span>
-                  <span className={`text-2xl transition-all duration-200 ${
-                    activeIndex === index ? 'rotate-45 text-violet-600' : 'rotate-0 text-black'
-                  }`}>
+                  <span
+                    className={`text-2xl transition-all duration-200 ${
+                      activeIndex === index
+                        ? "rotate-45 text-violet-600"
+                        : "rotate-0 text-black"
+                    }`}
+                  >
                     +
                   </span>
                 </div>
               </button>
-              
-              {activeIndex === index && (
-                <div className="mt-2 font-inter text-[16px] leading-[24px] text-gray-700">
-                  {item.content}
-                </div>
-              )}
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  activeIndex === index
+                    ? "max-h-[500px] opacity-100 mt-2"
+                    : "max-h-0 opacity-0"
+                } font-inter text-[16px] leading-[24px] text-gray-700`}
+              >
+                <p className="pr-4">{item.content}</p>
+              </div>
             </li>
           ))}
         </ul>

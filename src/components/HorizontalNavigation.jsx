@@ -1,22 +1,17 @@
 import React from "react";
 
-const HorizontalNavItem = ({ children }) => {
+export default function HorizontalNavigation({ items, className = "" }) {
   return (
-    <a
-      href="#"
-      className="text-gray-500 hover:text-white text-sm transition whitespace-nowrap"
-    >
-      {children}
-    </a>
-  );
-};
-
-export default function HorizontalNavigation() {
-  return (
-    <div className="flex space-x-4">
-      <HorizontalNavItem>Privacy</HorizontalNavItem>
-      <HorizontalNavItem>Policy</HorizontalNavItem>
-      <HorizontalNavItem>Terms & Conditions</HorizontalNavItem>
-    </div>
+    <nav className={`flex items-center gap-6 ${className}`}>
+      {items.map((item, index) => (
+        <a
+          key={index}
+          href={item.href || "#"}
+          className="font-medium text-white text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] transition whitespace-nowrap"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
   );
 }

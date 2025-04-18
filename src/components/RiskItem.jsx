@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function RiskItem({ title }) {
     return (
       <div className="bg-white p-4 rounded-lg shadow">

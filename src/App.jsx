@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import SubscriptionSection from "./components/SubscriptionSection";
 import Footer from "./components/Footer";
 import MediaLogosSection from "./components/MediaLogosSection";
+import "./index.css";
 
 export default function LandingPage() {
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import Button from "./common/Button";
 import "slick-carousel/slick/slick.css";
@@ -85,7 +86,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="bg-white text-black px-14 flex justify-between gap-6 items-center max-w-[1440px] mx-auto mb-20">
+    <section className="bg-white text-black px-[64px] flex justify-between gap-6 items-center max-w-[1440px] mx-auto mb-20">
       {/* Left Side Content */}
       <div>
         <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4">

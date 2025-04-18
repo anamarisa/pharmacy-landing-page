@@ -1,6 +1,8 @@
+import React from "react";
+
 export default function STIAwareness() {
   return (
-    <section className="px-14 py-6">
+    <section className="px-[64px] py-6">
       <div className="flex justify-between items-center mb-8">
         <h3 className="font-manrope text-[36px] leading-[46px] tracking-[-0.03em] text-xl font-semibold">
           Understanding the Risks,{" "}

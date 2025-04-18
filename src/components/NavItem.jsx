@@ -5,7 +5,7 @@ const NavItem = ({ children }) => {
     <li className="w-[93px] h-[24px]">
       <a
         href="#"
-        className="text-gray-400 hover:text-white transition font-inter font-normal text-[16px] leading-[24px] tracking-normal"
+        className="text-white hover:text-white transition font-inter font-light text-[16px] leading-[24px] tracking-normal"
       >
         {children}
       </a>
