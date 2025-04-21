@@ -6,6 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import frame1 from "../assets/images/frame1.png";
 import frame2 from "../assets/images/frame2.png";
+import frame3 from "../assets/images/frame3.png";
+import frame4 from "../assets/images/frame4.png";
+import frame5 from "../assets/images/frame5.png";
+import frame6 from "../assets/images/frame6.png";
+import frame7 from "../assets/images/frame7.png";
+import frame8 from "../assets/images/frame8.png";
 
 export default function HeroSection({ scrollToComparison }) {
   const keywordSliderRef = useRef(null);
@@ -28,7 +34,7 @@ export default function HeroSection({ scrollToComparison }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
     speed: 3000,
     infinite: true,
     arrows: false,
@@ -43,8 +49,8 @@ export default function HeroSection({ scrollToComparison }) {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 3000,
+    autoplaySpeed: 5000,
+    speed: 2000,
     infinite: true,
     arrows: false,
     dots: false,
@@ -68,9 +74,9 @@ export default function HeroSection({ scrollToComparison }) {
     },
   ];
 
-  const column1 = [frame1, frame1];
+  const column1 = [frame1, frame2, frame3, frame4];
 
-  const column2 = [frame2, frame2];
+  const column2 = [frame5, frame6, frame7, frame8];
 
   return (
     <section className="bg-white text-black px-[64px] flex justify-between gap-6 items-center max-w-[1440px] mx-auto mb-20">
@@ -135,14 +141,14 @@ export default function HeroSection({ scrollToComparison }) {
       </div>
 
       {/* Dual Column Vertical Sliders */}
-      <div className="grid grid-cols-2 gap-4 h-[532px] relative">
+      <div className="grid grid-cols-2 gap-4 h-[578px] relative">
         {/* Column 1 */}
-        <div className="w-[320px] h-full overflow-hidden">
+        <div className="w-[313px] h-full overflow-hidden">
           <Slider {...imageSliderSettings}>
             {column1.map((src, index) => (
               <div key={index} className="p-1">
-                <div className="relative w-[320px] h-[1312px]">
-                  <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                <div className="relative w-[313px] h-[313px]">
+                  <div className="absolute inset-0 overflow-hidden">
                     <img
                       src={src}
                       alt={`Slide ${index}`}
@@ -156,12 +162,12 @@ export default function HeroSection({ scrollToComparison }) {
         </div>
 
         {/* Column 2 */}
-        <div className="w-[320px] h-full overflow-hidden">
+        <div className="w-[313px] h-full overflow-hidden">
           <Slider {...imageSliderSettingsReversed}>
             {column2.map((src, index) => (
               <div key={index} className="p-1">
-                <div className="relative w-[320px] h-[1312px]">
-                  <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                <div className="relative w-[313px] h-[313px]">
+                  <div className="absolute inset-0 overflow-hidden">
                     <img
                       src={src}
                       alt={`Slide Reverse ${index}`}
