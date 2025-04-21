@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HorizontalNavigation({ items, className = "" }) {
   return (
     <nav className={`flex items-center gap-6 ${className}`}>
       {items.map((item, index) => (
-        <a
+        <Link
           key={index}
-          href={item.href || "#"}
-          className="font-medium text-white text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] transition whitespace-nowrap"
+          to={item.href}
+          className="font-medium cursor-pointer text-white text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] transition whitespace-nowrap"
         >
           {item.label}
-        </a>
+        </Link>
       ))}
     </nav>
   );

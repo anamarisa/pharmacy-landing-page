@@ -10,12 +10,12 @@
   --color-teal-custom: #0490da;
   --color-accent-yellow: #cde300;
   --color-neutral: #0a0a0a;
-  --color-violet: #7C3AED;
+  --color-violet: #7c3aed;
   --color-dark-violet: #6a31ce;
   --color-gray-border: #525252;
   --color-white-table: #fafafa;
-  --color-light-orange: #FF8C00;
-  --color-white-neutral: #FAFAFA;
+  --color-light-orange: #ff8c00;
+  --color-white-neutral: #fafafa;
   --color-dark-purple: #2e1065;
 
   --animate-fade-in: fade-in 2s ease-out forwards;
@@ -28,4 +28,15 @@
       opacity: 1;
     }
   }
+}
+
+.custom-gradient-bg {
+  background: conic-gradient(
+    from 62deg at 61.01% 66%,
+    #8be199 19.992877542972565deg,
+    #8be199 37.42880254983902deg,
+    #e7fe74 159.61450338363647deg,
+    #ff5a5a 301.7099976539612deg,
+    #d40505 360deg
+  );
 }

@@ -7,6 +7,7 @@ import Syphilis from "../assets/images/category-images/syphilis.png";
 import Herpes from "../assets/images/category-images/herpes.png";
 import HepatitisB from "../assets/images/category-images/hepatitis.png";
 import GenitalWarts from "../assets/images/category-images/genital-warts.png";
+// import GenitalLottie from "../assets/images/category-images/GENITAL.lottie";
 import Ureaplasma from "../assets/images/category-images/ureaplasma.png";
 import Mycoplasma from "../assets/images/category-images/mycoplasma.png";
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function STIDetailHeader() {
   return (
@@ -6,9 +7,12 @@ export default function STIDetailHeader() {
       <h4 className="text-violet font-semibold text-[30px] leading-[36px] tracking-[-0.03em]">
         F* PrEP
       </h4>
-      <button className="text-violet font-semibold border border-violet px-[18px] py-[6px] rounded-md text-[16px] leading-[24px] tracking-[-0.02em] hover:bg-purple-50">
+      <Link
+        to="/prep-page"
+        className="text-violet font-semibold border border-violet px-[18px] py-[6px] rounded-md text-[16px] leading-[24px] tracking-[-0.02em] hover:bg-purple-50"
+      >
         See More
-      </button>
+      </Link>
     </div>
   );
 }

@@ -2,10 +2,11 @@ import React from "react";
 import logo from "../assets/logo.png";
 import cartIcon from "../assets/cart.png";
 import HorizontalNavigation from "./HorizontalNavigation";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const navItems = [
-    { label: "PrEP", href: "#" },
+    { label: "PrEP", href: "/" },
     { label: "Education", href: "#" },
     { label: "Medications", href: "#" },
   ];
@@ -19,17 +20,17 @@ export default function Header() {
           alt="Logo"
           className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] object-contain"
         />
-        <h1 className="text-sm md:text-lg font-semibold text-white leading-[32px] tracking-[-0.02em]">
+        <Link
+          to="/"
+          className="text-sm md:text-lg font-semibold text-white leading-[32px] tracking-[-0.02em]"
+        >
           Designed by doctors
-        </h1>
+        </Link>
       </div>
 
       <div className="flex items-center justify-end gap-6">
         {/* Navigation */}
-        <HorizontalNavigation
-          items={navItems}
-          className="hidden md:flex"
-        />
+        <HorizontalNavigation items={navItems} className="hidden md:flex" />
 
         {/* Cart + Login */}
         <div className="flex items-center gap-2">
