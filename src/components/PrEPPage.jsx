@@ -7,6 +7,8 @@ import nrtisIcon from "../assets/icons/nrtis.png";
 import nnrtisIcon from "../assets/icons/nnrtis.png";
 import pisIcon from "../assets/icons/pis.png";
 import instisIcon from "../assets/icons/instis.png";
+import bgPrep from "../assets/images/bg-images/bg-prep.png";
+import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
   const symptoms = [
@@ -34,27 +36,28 @@ export default function PrepPage() {
 
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 w-full">
-        <div className="bg-black relative h-[300px] md:h-[400px]">
-          <img
-            src="https://i.imgur.com/f3jM6yk.png"
-            alt="PrEP"
-            className="w-full h-full object-cover"
-          />
+        {/* PrEP Section */}
+        <div className="relative aspect-[3/2] md:aspect-auto md:h-[400px]">
+          <img src={bgPrep} alt="PrEP" className="w-full h-full object-cover" />
+          {/* Overlay transparan */}
+          <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <h2 className="text-white text-[40px] md:text-[48px] font-semibold tracking-tight">
+            <h2 className="text-white text-[40px] md:text-[48px] font-bold tracking-tight drop-shadow-lg">
               PrEP
             </h2>
           </div>
         </div>
-        <div className="bg-gradient-to-r from-gray-300 to-white flex items-center justify-center h-[300px] md:h-[400px]">
-          <h2 className="text-gray-700 text-[40px] md:text-[48px] font-semibold tracking-tight">
+
+        {/* PEP Section */}
+        <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-white flex items-center justify-center h-[300px] md:h-[400px]">
+          <h2 className="text-gray-800 text-[40px] md:text-[48px] font-bold tracking-tight">
             PEP
           </h2>
         </div>
       </section>
 
       {/* Content */}
-      <main className=" max-w-[1024px] mx-auto py-10">
+      <main className=" max-w-[1024px] mx-auto py-10 px-4 sm:px-6">
         {/* SYMPTOMS */}
         <div className="flex flex-col md:flex-row gap-10">
           {/* Left Content */}
@@ -62,7 +65,7 @@ export default function PrepPage() {
             <h3 className="text-sm font-semibold text-dark-violet uppercase mb-2">
               SYMPTOMS
             </h3>
-            <h3 className="font-manrope font-bold text-[36px] leading-[46px] tracking-[-0.02em] mb-2">
+            <h3 className="font-manrope font-bold text-[28px] md:text-[36px] leading-[36px] md:leading-[46px] tracking-[-0.02em] mb-2">
               Recognizing Signs <br />
               Symptoms To Look Out For
             </h3>
@@ -91,7 +94,7 @@ export default function PrepPage() {
           <h3 className="text-sm font-bold text-dark-violet uppercase mb-2">
             Medications
           </h3>
-          <h3 className="font-manrope font-bold text-[36px] leading-[46px] tracking-[-0.02em] mb-2">
+          <h3 className="font-manrope font-bold text-[28px] md:text-[36px] leading-[36px] md:leading-[46px] tracking-[-0.02em] mb-2">
             Controlling The Virus
           </h3>
           <p className="font-inter text-[18px] font-light leading-[28px] tracking-[-0.02em] text-neutral/950 md:text-lg max-w-[700px] mb-6">
@@ -99,33 +102,41 @@ export default function PrepPage() {
             dedicated to providing the best possible dental care for you.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Left side: medications */}
-            <div className="lg:col-span-2 flex flex-col gap-4">
-              <MedicationCard
-                iconSrc={nrtisIcon}
-                name="NRTIs"
-                description="These drugs block HIV from copying its genetic material, preventing the virus from multiplying. Common NRTIs include Tenofovir and Emtricitabine."
-              />
-              <MedicationCard
-                iconSrc={nnrtisIcon}
-                name="NNRTIs"
-                description="NNRTIs stop HIV from replicating by binding directly to the virus’s reverse transcriptase enzyme. Examples include Efavirenz and Rilpivirine."
-              />
-              <MedicationCard
-                iconSrc={pisIcon}
-                name="Protease Inhibitors (PIs)"
-                description="These medications prevent HIV from maturing by blocking protease. Common PIs are Darunavir and Atazanavir."
-              />
-              <MedicationCard
-                iconSrc={instisIcon}
-                name="Integrase Inhibitors (INSTIs)"
-                description="This class stops HIV from integrating its genetic material into DNA, preventing infection spread. Examples are Dolutegravir and Raltegravir."
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* medication cards */}
+            <div className="lg:col-span-2 flex flex-col divide-y divide-gray-200">
+              <div className="py-1">
+                <MedicationCard
+                  iconSrc={nrtisIcon}
+                  name="NRTIs"
+                  description="These drugs block HIV from copying its genetic material, preventing the virus from multiplying. Common NRTIs include Tenofovir and Emtricitabine."
+                />
+              </div>
+              <div className="py-1">
+                <MedicationCard
+                  iconSrc={nnrtisIcon}
+                  name="NNRTIs"
+                  description="NNRTIs stop HIV from replicating by binding directly to the virus’s reverse transcriptase enzyme. Examples include Efavirenz and Rilpivirine."
+                />
+              </div>
+              <div className="py-1">
+                <MedicationCard
+                  iconSrc={pisIcon}
+                  name="Protease Inhibitors (PIs)"
+                  description="These medications prevent HIV from maturing by blocking protease. Common PIs are Darunavir and Atazanavir."
+                />
+              </div>
+              <div className="py-1">
+                <MedicationCard
+                  iconSrc={instisIcon}
+                  name="Integrase Inhibitors (INSTIs)"
+                  description="This class stops HIV from integrating its genetic material into DNA, preventing infection spread. Examples are Dolutegravir and Raltegravir."
+                />
+              </div>
             </div>
 
             {/* Right side: info panel */}
-            <div className="border border-gray-200 p-4 rounded-lg">
+            <div className="border border-gray-200 p-4 rounded-lg flex flex-col overflow-hidden">
               <h4 className="font-inter text-[24px] font-semibold text-black mb-2">
                 Treatment
               </h4>
@@ -141,6 +152,11 @@ export default function PrepPage() {
               >
                 Start Now
               </a>
+              <img
+                src={hivAnimation}
+                alt=""
+                className="w-[200px] mx-auto object-cover"
+              />
             </div>
           </div>
         </section>
@@ -150,7 +166,7 @@ export default function PrepPage() {
           <h3 className="text-sm font-bold text-[#7B61FF] uppercase mb-2">
             Side Effects
           </h3>
-          <h2 className="font-manrope font-bold text-[36px] leading-[46px] tracking-[-0.02em] mb-2">
+          <h2 className="font-manrope font-bold text-[28px] md:text-[36px] leading-[36px] md:leading-[46px] tracking-[-0.02em] mb-2">
             What To Expect
           </h2>
           <p className="font-inter text-[18px] font-light leading-[28px] tracking-[-0.02em] text-neutral/950 md:text-lg max-w-2xl mb-8">
