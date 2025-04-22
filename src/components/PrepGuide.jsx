@@ -44,11 +44,11 @@ export default function PrepGuide() {
   ];
 
   return (
-    <section className="p-6 mx-auto text-center my-30 max-w-7xl h-screen">
-      <h3 className="font-manrope mb-4 text-[36px] leading-[46px] tracking-[-0.03em] font-semibold">
+    <section className="px-6 pb-16 mx-auto text-center lg:my-30 max-w-7xl">
+      <h3 className="font-manrope mb-4 text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold">
         Your Simple Guide to Staying Protected
       </h3>
-      <p className="font-inter text-[18px] leading-[28px] font-normal tracking-[-0.03em] text-gray-600">
+      <p className="font-inter text-[14px] lg:text-[18px] leading-[20px] lg:leading-[28px] font-normal tracking-[-0.03em] text-gray-600">
         PrEP is a powerful tool against HIV. Follow these six{" "}
         <span>
           <br /> steps for better health.
@@ -65,13 +65,13 @@ export default function PrepGuide() {
               <img
                 src={stepIcons[i].icon}
                 alt={`${title} icon`}
-                className="h-[48px] w-[58px] object-contain transition duration-[250ms] ease-out group-hover:brightness-0 group-hover:invert"
+                className="w-[30px] h-[32px] lg:h-[48px] lg:w-[58px] object-contain transition duration-[250ms] ease-out group-hover:brightness-0 group-hover:invert"
               />
             </div>
-            <h4 className="font-inter font-semibold text-neutral text-[24px] leading-[32px] tracking-[-0.02em] mb-2 group-hover:text-white transition-colors duration-[250ms] ease-out">
+            <h4 className="font-inter font-semibold text-neutral text-[20px] lg:text-[24px] leading-[28px] lg:leading-[32px] tracking-[-0.02em] mb-2 group-hover:text-white transition-colors duration-[250ms] ease-out">
               {title}
             </h4>
-            <p className="font-inter font-normal text-gray-500 text-[16px] leading-[24px] tracking-[-0.02em] group-hover:text-white transition-colors duration-[250ms] ease-out">
+            <p className="font-inter font-normal text-gray-500 text-[14px] leading-[20px] lg:text-[16px] lg:leading-[24px] tracking-[-0.02em] group-hover:text-white transition-colors duration-[250ms] ease-out">
               {desc}
             </p>
           </div>

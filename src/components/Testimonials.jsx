@@ -29,14 +29,8 @@ export default function Testimonials() {
     arrows: false,
     pauseOnHover: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -62,28 +56,23 @@ export default function Testimonials() {
   );
 
   return (
-    <div className="my-40 h-screen">
-      <div className="flex justify-between items-center text-left mx-auto px-[64px]">
-        <div>
-          <h3 className="font-manrope font-semibold text-[32px] md:text-[36px] leading-[46px] tracking-[-0.03em] text-gray-900">
+    <div className="my-24 px-4 sm:px-6 md:px-8 lg:px-[64px]">
+      {/* Heading Section */}
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-12">
+        <div className="text-center lg:text-left flex-1">
+          <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900">
             Life-Changing Stories from Our Users
-            <span>
-              <br />
-              Who Took Control of Their Health
-            </span>
+            <span>Who Took Control of Their Health</span>
           </h3>
         </div>
-
-        <div className="text-gray-500 font-inter text-[18px] leading-[28px] tracking-[-0.02em]">
-          Read experiences from those transformed by{" "}
-          <span>
-            <br />
-            Prep. See how it empowers them to protect their health.
-          </span>
+        <div className="text-gray-500 font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.02em] text-center lg:text-left flex-1">
+          Read experiences from those transformed by Prep. See how it empowers
+          them to protect their health.
         </div>
       </div>
 
-      <div className="py-12 bg-white w-full mx-auto">
+      {/* Sliders */}
+      <div className="py-4 w-full mx-auto">
         {/* Row 1 - slide to left */}
         <div className="mb-8">
           <Slider {...settingsLeft}>

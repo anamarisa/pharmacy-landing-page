@@ -15,14 +15,25 @@ export default function SubscriptionSection() {
     dots: false,
     infinite: true,
     speed: 1000,
-    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: false,
+        },
+      },
+    ],
   };
 
   return (
-    <section className="relative px-[64px] h-[512px] my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
+    <section className="relative px-4 sm:px-6 md:px-12 lg:px-[64px] h-[512px] md:h-[460px] my-20 md:my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
@@ -31,16 +42,41 @@ export default function SubscriptionSection() {
               <img
                 src={url}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover opacity-90"
+                className="w-full h-[512px] md:h-[460px] object-cover opacity-90"
+                loading="lazy"
               />
             </div>
           ))}
         </Slider>
       </div>
 
-      {/* Subscription Form */}
-      <div className="absolute top-10 right-10 z-10">
-        <div className="bg-white p-6 rounded-xl shadow-lg w-[340px]">
+      {/* Subscription Form - Mobile Bottom Position */}
+      <div className="absolute z-10 bottom-4 left-1/2 transform -translate-x-1/2 w-full px-4 md:hidden">
+        <div className="bg-white p-5 rounded-xl shadow-lg w-full max-w-[340px] mx-auto text-center">
+          <h3 className="font-inter font-bold text-[18px] leading-[24px] tracking-[-0.03em] text-gray-900 mb-3">
+            Upgrade Your Health Game
+          </h3>
+          <p className="font-inter font-normal text-gray-500 text-[14px] leading-[22px] tracking-[-0.03em] mb-4">
+            Be the first to know about new launches, exclusive deals, and expert
+            health tips—delivered straight to your inbox.
+          </p>
+
+          <div className="space-y-3">
+            <input
+              type="email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
+              placeholder="name@domain.com"
+            />
+            <button className="w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
+              Sign me up
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Subscription Form - Desktop Position */}
+      <div className="hidden md:block absolute z-10 top-9 right-10">
+        <div className="bg-white p-6 rounded-xl shadow-lg w-[340px] text-left">
           <h3 className="font-inter font-bold text-[20px] leading-[24px] tracking-[-0.03em] text-gray-900 mb-3">
             Upgrade Your Health Game
           </h3>
@@ -52,7 +88,7 @@ export default function SubscriptionSection() {
           <div className="space-y-4">
             <input
               type="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet focus:border-transparent text-sm"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
               placeholder="name@domain.com"
             />
             <button className="w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">

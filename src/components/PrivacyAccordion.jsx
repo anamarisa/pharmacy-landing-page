@@ -69,9 +69,9 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="px-[64px] h-screen custom-gradient-bg grid md:grid-cols-2 gap-8 items-center">
+    <section className="px-[64px] py-16 custom-gradient-bg grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h3 className="font-manrope text-[36px] leading-[46px] tracking-[-0.03em] font-semibold mb-4">
+        <h3 className="font-manrope text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold mb-4">
           Fight STIs with Ease and Confidence
         </h3>
         <p className="font-inter text-[18px] leading-[28px] font-normal tracking-[-0.03em] text-gray-700 mb-6">

@@ -15,7 +15,7 @@ export default function MediaLogosSection() {
   return (
     <section className="bg-light-orange py-12 my-30 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
           {mediaLogos.map((media, index) => (
             <div
               key={index}

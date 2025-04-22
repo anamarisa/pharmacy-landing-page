@@ -23,7 +23,7 @@ export default function HeroSection({ scrollToComparison }) {
         keywordSliderRef.current.slickNext();
         subtitleSliderRef.current.slickNext();
       }
-    }, 4000); // 3000 autoplaySpeed + 1000 transition speed
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -56,6 +56,8 @@ export default function HeroSection({ scrollToComparison }) {
     dots: false,
     pauseOnHover: false,
     cssEase: "linear",
+    centerMode: true, // Added for better mobile centering
+    centerPadding: "0px", // Ensures no extra padding
   };
 
   const imageSliderSettingsReversed = {
@@ -75,52 +77,49 @@ export default function HeroSection({ scrollToComparison }) {
   ];
 
   const column1 = [frame1, frame2, frame3, frame4];
-
   const column2 = [frame5, frame6, frame7, frame8];
 
   return (
-    <section className="bg-white text-black px-[64px] flex justify-between gap-6 items-center max-w-[1440px] mx-auto mb-20">
+    <section className="w-full bg-white text-black px-4 sm:px-6 lg:px-[64px] flex flex-col lg:flex-row justify-between gap-6 items-center lg:max-w-[1440px] mx-auto mb-20 text-center lg:text-left relative">
       {/* Left Side Content */}
-      <div>
-        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4">
-          <p className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.02em] text-[#6A31CE]">
+      <div className="w-full max-w-[500px] lg:max-w-none mx-auto lg:mx-0 lg:text-left flex flex-col items-center lg:items-start">
+        {/* Badge */}
+        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4 mt-16">
+          <p className="font-inter font-normal text-[12px] sm:text-[16px] leading-[24px] tracking-[-0.02em] text-[#6A31CE]">
             F HEALTH WORRIES, SAY HELLO TO GOOD HEALTH
           </p>
         </div>
 
-        {/* F* [Sliding Word] */}
+        {/* Title with Sliding Word */}
         <div className="flex items-center h-[87px] overflow-hidden">
-          <h2 className="font-manrope font-semibold text-dark-violet text-[64px] leading-[87px] mr-2">
+          <h2 className="font-manrope font-semibold text-dark-violet text-[64px] leading-[87px] flex">
             F*
+            <div className="w-[120px] ml-1">
+              <Slider ref={keywordSliderRef} {...textSliderSettings}>
+                {textContent.map((item, index) => (
+                  <div key={index}>
+                    <span>{item.keyword}</span>
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </h2>
-          <Slider
-            ref={keywordSliderRef}
-            {...{ ...textSliderSettings, autoplay: false }}
-            className="w-[120px]"
-          >
-            {textContent.map((item, index) => (
-              <div key={index}>
-                <h2 className="font-manrope font-semibold text-dark-violet text-[64px] leading-[87px]">
-                  {item.keyword}
-                </h2>
-              </div>
-            ))}
-          </Slider>
         </div>
 
-        <h3 className="font-manrope font-semibold text-[48px] leading-[100px] tracking-[-0.04em]">
+        <h3 className="font-manrope font-semibold text-[20px] sm:text-[48px] leading-[40px] sm:leading-[52px] tracking-[-0.04em] mb-2 sm:mb-4">
           Empower Your Health Journey
         </h3>
+
         {/* Subtitle slider */}
-        <div className="h-[32px] overflow-hidden mb-4">
+        <div className="h-[32px] overflow-hidden mb-5 sm:mb-4 w-full">
           <Slider
             ref={subtitleSliderRef}
             {...{ ...textSliderSettings, autoplay: false }}
-            className="w-[500px]"
+            className="w-full max-w-[500px] mx-auto lg:mx-0"
           >
             {textContent.map((item, index) => (
               <div key={index}>
-                <p className="font-inter text-[20px] leading-[28px] max-w-[500px] text-black/70 tracking-[-0.03em] font-normal">
+                <p className="font-inter text-[18px] sm:text-[20px] leading-[24px] sm:leading-[28px] text-black/70 tracking-[-0.03em] font-normal">
                   {item.subtitle}
                 </p>
               </div>
@@ -129,59 +128,61 @@ export default function HeroSection({ scrollToComparison }) {
         </div>
 
         {/* Static Subtitle */}
-        <p className="font-inter font-normal text-[12px] leading-[16px] tracking-[-0.02em] text-[#0A0A0A] opacity-30 mb-10">
+        <p className="font-inter font-normal text-[12px] leading-[16px] tracking-[-0.02em] text-[#0A0A0A] opacity-30 mb-6 sm:mb-10 hidden sm:block">
           99% of Patients Pay $0* For The Medication.*
         </p>
 
         {/* Buttons */}
-        <div className="flex gap-4">
-          <Button onClick={scrollToComparison}>Get Started</Button>
-          <Button variant="secondary">Why F*STI</Button>
+        <div className="flex flex-col sm:flex-row gap-4 ">
+          <Button onClick={scrollToComparison} className="">
+            Get Started
+          </Button>
+          <Button variant="secondary" className="hidden sm:flex">
+            Why F*STI
+          </Button>
         </div>
       </div>
 
       {/* Dual Column Vertical Sliders */}
-      <div className="grid grid-cols-2 gap-4 h-[578px] relative">
-        {/* Column 1 */}
-        <div className="w-[313px] h-full overflow-hidden">
-          <Slider {...imageSliderSettings}>
-            {column1.map((src, index) => (
-              <div key={index} className="p-1">
-                <div className="relative w-[313px] h-[313px]">
-                  <div className="absolute inset-0 overflow-hidden">
+      <div className="relative w-full max-w-[700px] h-[360px] sm:h-[578px] mt-8 lg:mt-0 overflow-hidden">
+        <div className="grid grid-cols-2 gap-1 sm:gap-4 w-full h-full mx-auto">
+          {/* Column 1 */}
+          <div className="w-full h-full">
+            <Slider {...imageSliderSettings}>
+              {column1.map((src, index) => (
+                <div key={index} className="px-1">
+                  <div className="relative w-full aspect-square">
                     <img
                       src={src}
                       alt={`Slide ${index}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+              ))}
+            </Slider>
+          </div>
 
-        {/* Column 2 */}
-        <div className="w-[313px] h-full overflow-hidden">
-          <Slider {...imageSliderSettingsReversed}>
-            {column2.map((src, index) => (
-              <div key={index} className="p-1">
-                <div className="relative w-[313px] h-[313px]">
-                  <div className="absolute inset-0 overflow-hidden">
+          {/* Column 2 */}
+          <div className="w-full h-full">
+            <Slider {...imageSliderSettingsReversed}>
+              {column2.map((src, index) => (
+                <div key={index} className="px-1">
+                  <div className="relative w-full aspect-square">
                     <img
                       src={src}
                       alt={`Slide Reverse ${index}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
 
-        {/* Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
+        {/* Gradient Overlay - Fixed to be visible */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10" />
       </div>
     </section>
   );
