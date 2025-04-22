@@ -33,7 +33,7 @@ export default function SubscriptionSection() {
   };
 
   return (
-    <section className="relative px-4 sm:px-6 md:px-12 lg:px-[64px] h-[512px] md:h-[460px] my-20 md:my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
+    <section className="relative px-4 sm:px-6 md:px-12 lg:px-[64px] h-[512px] md:h-[460px] my-40 md:my-40 rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
