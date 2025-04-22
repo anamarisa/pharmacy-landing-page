@@ -98,7 +98,7 @@ export default function PrivacyAccordion() {
                 {/* Title and Toggle */}
                 <div className="flex-grow flex justify-between items-center">
                   <span
-                    className={`font-semibold text-[24px] leading-[32px] tracking-[-0.03em] transition-colors ${
+                    className={`font-semibold text-[20px] md:text-[24px] leading-[32px] tracking-[-0.03em] transition-colors ${
                       activeIndex === index ? "text-violet-600" : "text-black"
                     }`}
                   >
@@ -123,7 +123,7 @@ export default function PrivacyAccordion() {
                     : "max-h-0 opacity-0"
                 } font-inter text-[16px] leading-[24px] text-gray-700`}
               >
-                <p className="pr-4">{item.content}</p>
+                <p className="pr-4 text-[16px]">{item.content}</p>
               </div>
             </li>
           ))}

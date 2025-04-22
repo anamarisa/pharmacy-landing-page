@@ -66,7 +66,7 @@ export default function STIAwareness() {
 
       {/* Mobile Slider */}
       <div className="md:hidden">
-        <Slider {...sliderSettings} className="mb-6">
+        <Slider {...sliderSettings} className="mb-12">
           {categories.map((category) => (
             <div
               key={category.name}
@@ -102,7 +102,6 @@ export default function STIAwareness() {
                 loading="lazy"
               />
             </div>
-            <p className="text-sm font-medium">{category.name}</p>
           </div>
         ))}
       </div>
