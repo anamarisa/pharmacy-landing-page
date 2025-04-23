@@ -6,7 +6,8 @@ import check from "../assets/privacy-icons/check.png";
 import heart from "../assets/privacy-icons/heart.png";
 import elder from "../assets/privacy-icons/elder.png";
 import support from "../assets/privacy-icons/support.png";
-import insurance from "../assets/privacy-icons/insurance.png";
+import insurance from "../assets/privacy-icons/insurance.gif";
+import coverage from "../assets/privacy-icons/coverage.jpeg";
 
 export default function PrivacyAccordion() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -14,11 +15,12 @@ export default function PrivacyAccordion() {
   const getImageForIndex = (index) => {
     switch (index) {
       case 0:
-      case 2:
         return support;
       case 1:
-      case 3:
         return insurance;
+      case 2:
+      case 3:
+        return coverage;
       case 4:
         return elder;
       default:
@@ -130,11 +132,11 @@ export default function PrivacyAccordion() {
         </ul>
       </div>
 
-      <div className="flex items-center justify-center text-center ">
+      <div className="flex items-center justify-center text-center">
         <img
           src={getImageForIndex(activeIndex)}
           alt="Visual"
-          className="w-auto h-auto transition-all duration-500 ease-in-out"
+          className="w-auto rounded-3xl h-auto transition-all duration-500 ease-in-out"
         />
       </div>
     </section>
