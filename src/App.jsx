@@ -10,7 +10,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/prep-page" element={<PrepPage />} />
+      <Route path="/sti-awareness/:categoryName" element={<PrepPage />} />
     </Routes>
   );
 }

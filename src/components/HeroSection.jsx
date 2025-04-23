@@ -133,8 +133,8 @@ export default function HeroSection({ scrollToComparison }) {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 ">
-          <Button onClick={scrollToComparison} className="">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button onClick={scrollToComparison}>
             Get Started
           </Button>
           <Button variant="secondary" className="hidden sm:flex">

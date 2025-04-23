@@ -77,7 +77,7 @@ export default function STIAwareness() {
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-[244px] object-contain"
+                  className="w-[300px] object-fit"
                   loading="lazy"
                 />
               </div>
@@ -91,14 +91,14 @@ export default function STIAwareness() {
         {categories.map((category) => (
           <div
             key={category.name}
-            className="p-2 text-center cursor-pointer hover:scale-105 transition-transform"
+            className="text-center cursor-pointer hover:scale-105 transition-transform"
             onClick={() => handleSelect(category.name)}
           >
             <div className="aspect-square flex items-center justify-center mb-2">
               <img
                 src={category.image}
                 alt={category.name}
-                className="h-full w-full object-contain max-h-[200px]"
+                className="h-full w-full object-fit"
                 loading="lazy"
               />
             </div>

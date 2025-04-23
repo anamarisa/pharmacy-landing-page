@@ -10,7 +10,7 @@ export default function STIDetailCard({ selected, categoryDetails }) {
 
   return (
     <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-10 bg-white-neutral rounded-lg sm:rounded-xl shadow-sm transition-shadow px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 lg:py-8 flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-      <STIDetailHeader />
+      <STIDetailHeader selected={selected} />
 
       <div className="flex flex-col lg:flex-row justify-between gap-4 sm:gap-5 md:gap-6">
         <STIDetailLeft

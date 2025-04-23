@@ -36,6 +36,14 @@ export const categoryDetails = {
     treatment: "Antibiotic treatment is effective...",
     sideEffects: "Mild nausea or diarrhea...",
   },
+  Trichomoniasis: {
+    image: Trichomoniasis,
+    description: "Trichomoniasis is a sexually transmitted infection...",
+    symptoms: "Painful urination, discharge...",
+    medication: "Antibiotics such as doxycycline...",
+    treatment: "Treatments include antibiotics...",
+    sideEffects: "Common side effects of trichomoniasis meds...",
+  },
   Syphilis: {
     image: Syphilis,
     description: "Syphilis is caused by Treponema pallidum...",
@@ -76,7 +84,14 @@ export const categoryDetails = {
     treatment: "Usually oral medication...",
     sideEffects: "Upset stomach, rash...",
   },
-  // Mycoplasma bisa ditambahkan nanti
+  // Mycoplasma: {
+  //   image: Mycoplasma,
+  //   description: "Caused by a bacteria-like organism...",
+  //   symptoms: "Burning while urinating...",
+  //   medication: "Antibiotics such as doxycycline...",
+  //   treatment: "Usually oral medication...",
+  //   sideEffects: "Upset stomach, rash...",
+  // },
 };
 
 export const categories = Object.entries(categoryDetails).map(([name, data]) => ({

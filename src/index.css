@@ -29,14 +29,23 @@
     }
   }
 }
-
 .custom-gradient-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-gradient-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: conic-gradient(
-    from 62deg at 61.01% 66%,
-    #8be199 19.992877542972565deg,
-    #8be199 37.42880254983902deg,
-    #e7fe74 159.61450338363647deg,
-    #ff5a5a 301.7099976539612deg,
-    #d40505 360deg
+    from 90deg,
+    #8be199 0%,
+    #e7fe74 25%,
+    #ff5a5a 60%,
+    #d40505 100%
   );
+  opacity: 1;
+  pointer-events: none;
 }

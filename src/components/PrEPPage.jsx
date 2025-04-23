@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { categoryDetails } from "../../src/data/categoryDetails";
 import Header from "../components/Header";
 import Footer from "./Footer";
 
@@ -11,6 +13,13 @@ import bgPrep from "../assets/images/bg-images/bg-prep.png";
 import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
+  const { categoryName } = useParams();
+  const detail = categoryDetails[categoryName];
+
+  if (!detail) {
+    return <p className="text-center mt-10">Category not found.</p>;
+  }
+
   const symptoms = [
     {
       stage: "Acute Stage",
@@ -38,11 +47,7 @@ export default function PrepPage() {
       <section className="grid grid-cols-1 lg:grid-cols-2 w-full">
         {/* PrEP Section */}
         <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[400px]">
-          <img 
-            src={bgPrep} 
-            alt="PrEP" 
-            className="w-full h-full object-cover" 
-          />
+          <img src={bgPrep} alt="PrEP" className="w-full h-full object-cover" />
           {/* Overlay transparan */}
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -217,7 +222,11 @@ export default function PrepPage() {
 // Component
 const SymptomCard = ({ stage, description }) => (
   <div className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-    <img src={prepIcon} alt="prep icon" className="w-8 h-8 md:w-10 md:h-10 mt-1" />
+    <img
+      src={prepIcon}
+      alt="prep icon"
+      className="w-8 h-8 md:w-10 md:h-10 mt-1"
+    />
     <div>
       <h4 className="font-inter text-lg md:text-xl leading-snug tracking-tight text-black">
         {stage}
@@ -232,7 +241,11 @@ const SymptomCard = ({ stage, description }) => (
 const MedicationCard = ({ iconSrc, name, description }) => {
   return (
     <div className="flex items-start gap-3 md:gap-4 py-3 md:py-4">
-      <img src={iconSrc} alt={name} className="w-12 h-12 md:w-16 md:h-16 object-contain mt-1" />
+      <img
+        src={iconSrc}
+        alt={name}
+        className="w-12 h-12 md:w-16 md:h-16 object-contain mt-1"
+      />
       <div>
         <h4 className="font-manrope font-semibold text-lg md:text-xl leading-snug tracking-tight text-neutral-900 mb-1">
           {name}
@@ -247,7 +260,11 @@ const MedicationCard = ({ iconSrc, name, description }) => {
 
 const SideEffectCard = ({ title, description }) => (
   <div className="p-4 md:p-5 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-    <img src={prepIcon} alt="prep icon" className="w-8 h-8 md:w-10 md:h-10 mb-3" />
+    <img
+      src={prepIcon}
+      alt="prep icon"
+      className="w-8 h-8 md:w-10 md:h-10 mb-3"
+    />
     <h4 className="font-inter font-medium text-lg md:text-xl leading-snug tracking-tight text-black mb-2">
       {title}
     </h4>

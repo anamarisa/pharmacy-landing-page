@@ -67,7 +67,7 @@ export default function SubscriptionSection() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
               placeholder="name@domain.com"
             />
-            <button className="w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
+            <button className="w-full cursor-pointer bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
               Sign me up
             </button>
           </div>
@@ -91,7 +91,7 @@ export default function SubscriptionSection() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
               placeholder="name@domain.com"
             />
-            <button className="w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
+            <button className="w-full bg-purple-700 cursor-pointer hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
               Sign me up
             </button>
           </div>
