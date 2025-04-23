@@ -13,38 +13,69 @@ import Icon6 from "../assets/table-icons/icon6.png";
 const features = [
   {
     feature: "Accessibility",
-    description:
-      "F* STI is in all 50 states. The availability and ease of access for users to obtain services or products, including geographical reach and inclusivity for diverse demographics.",
+    description: (
+      <>
+        <strong>F* STI is in all 50 states.</strong> The availability and ease
+        of access for users to obtain services or products, including
+        geographical reach and inclusivity for diverse demographics.
+      </>
+    ),
     icon: Icon1,
   },
   {
     feature: "Privacy",
-    description:
-      "Confidential & Discreet—Your Privacy Matters. We ensure confidentiality and prevent unauthorized access to the patient's personal information.",
+    description: (
+      <>
+        <strong>Confidential & Discreet—Your Privacy Matters.</strong> We ensure
+        confidentiality and prevent unauthorized access to the patient's
+        personal information.
+      </>
+    ),
     icon: Icon2,
   },
   {
     feature: "Cost",
-    description:
-      "99% of our patients pay as low as $0 with insurance. We accept most commercial insurances. For uninsured patients, we can assist with enrollment in the patient assistance program that can significantly lower the payments.",
+    description: (
+      <>
+        <strong>99% of our patients pay as low as $0 with insurance.</strong> We
+        accept most commercial insurances. For uninsured patients, we can assist
+        with enrollment in the patient assistance program that can significantly
+        lower the payments.
+      </>
+    ),
     icon: Icon3,
   },
   {
     feature: "Convenient",
-    description:
-      "No video or in-person visits needed. Our patients prefer convenience and minimal appointments. With ease, you can obtain a prescription entirely online.",
+    description: (
+      <>
+        <strong>No video or in-person visits needed.</strong> Our patients
+        prefer convenience and minimal appointments. With ease, you can obtain a
+        prescription entirely online.
+      </>
+    ),
     icon: Icon4,
   },
   {
     feature: "Medication Delivery",
-    description:
-      "Medication delivered at no cost for insured patients. We deliver your medications in discreet, unmarked packaging for your privacy.",
+    description: (
+      <>
+        <strong>Medication delivered at no cost for insured patients.</strong>{" "}
+        We deliver your medications in discreet, unmarked packaging for your
+        privacy.
+      </>
+    ),
     icon: Icon5,
   },
   {
     feature: "STI Experts",
-    description:
-      "One-stop shop for everything STI-related. From education and testing to treatment and medication delivery, we provide comprehensive care every step of the way.",
+    description: (
+      <>
+        <strong>One-stop shop for everything STI-related.</strong> From
+        education and testing to treatment and medication delivery, we provide
+        comprehensive care every step of the way.
+      </>
+    ),
     icon: Icon6,
   },
 ];
@@ -76,23 +107,26 @@ export default function ComparisonTable() {
       <div className="overflow-x-auto">
         <div className="w-auto lg:min-w-[768px] border border-gray-300 rounded-xl overflow-hidden shadow-sm">
           {/* Header Row */}
-          <div className="flex bg-gray-100 font-inter font-medium text-[20px] md:text-[24px] leading-[32px] tracking-[-0.04em]">
-            <div className="flex-[2] p-4 flex items-center justify-center">
+          <div className="flex bg-gray-100 font-inter font-medium text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] tracking-[-0.04em]">
+            <div className="basis-1/2 md:flex-[2] p-4 flex items-center justify-start md:justify-center">
               Features
             </div>
-            <div className="flex-1 p-4 flex items-center justify-center">
+            <div className="basis-1/4 md:flex-1 p-4 flex items-center justify-center">
               F* STI
             </div>
-            <div className="flex-1 p-4 flex items-center justify-center">
+            <div className="basis-1/4 md:flex-1 p-4 flex items-center justify-center">
               Others
             </div>
           </div>
 
           {/* Data Rows */}
           {features.map((item, index) => (
-            <div key={index} className="flex border-t border-gray-300">
+            <div
+              key={index}
+              className="flex border-t border-gray-300 items-start"
+            >
               {/* Feature Column */}
-              <div className="flex-[2] p-4 text-left bg-white flex items-start pl-4">
+              <div className="basis-1/2 md:flex-[2] p-4 text-left bg-white flex items-start">
                 <div className="flex items-center md:items-start gap-4 w-full">
                   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center">
                     <img
@@ -102,7 +136,7 @@ export default function ComparisonTable() {
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="text-[14px] md:text-[20px] leading-[28px] md:leading-[28px] font-semibold text-gray-900">
                       {item.feature}
                     </h4>
                     <p className="text-sm text-gray-600 mt-1 hidden md:block">
@@ -113,7 +147,7 @@ export default function ComparisonTable() {
               </div>
 
               {/* F*STI Column */}
-              <div className="flex-1 p-4 bg-white flex items-center justify-center">
+              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center">
                 <img
                   src={done}
                   alt="Available in F* STI"
@@ -122,7 +156,7 @@ export default function ComparisonTable() {
               </div>
 
               {/* Others Column */}
-              <div className="flex-1 p-4 bg-white flex items-center justify-center">
+              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center">
                 <img
                   src={cancel}
                   alt="Not available in others"
