@@ -13,22 +13,20 @@ export default function MediaLogosSection() {
   ];
 
   return (
-    <section className="bg-light-orange py-12 my-30 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
-          {mediaLogos.map((media, index) => (
-            <div
-              key={index}
-              className="w-[160px] h-[80px] flex items-center justify-center"
-            >
-              <img
-                src={media.src}
-                alt={media.alt}
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
+    <section className="bg-light-orange px-5 py-8 lg:p-[64px] mt-20 lg:mt-[152px]">
+      <div className="flex flex-wrap justify-center items-center gap-x-[50px] gap-y-[24px]">
+        {mediaLogos.map((media, index) => (
+          <div
+            key={index}
+            className="w-[160px] h-[80px] flex items-center justify-center"
+          >
+            <img
+              src={media.src}
+              alt={media.alt}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

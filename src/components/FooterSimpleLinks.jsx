@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function FooterSimpleLinks({ items, className = "" }) {
   return (
-    <div className={`flex flex-wrap gap-x-6 gap-y-2 ${className}`}>
+    <div className={`flex flex-col md:flex-row gap-x-6 gap-y-6 ${className}`}>
       {items.map((item, index) => (
         <Link
           key={index}

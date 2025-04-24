@@ -29,23 +29,29 @@
     }
   }
 }
+
 .custom-gradient-bg {
   position: relative;
   overflow: hidden;
 }
 
 .custom-gradient-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: conic-gradient(
-    from 90deg,
-    #8be199 0%,
-    #e7fe74 25%,
-    #ff5a5a 60%,
-    #d40505 100%
-  );
-  opacity: 1;
   pointer-events: none;
+  filter: contrast(105%);
+
+  background: conic-gradient(
+    from 110deg at 61.01% 66%,
+    #8BE199 0deg,
+    #A3E88B 15deg,
+    #E7FE74 60deg,
+    #FFE074 130deg,
+    #FFB05A 200deg,
+    #FF5A5A 270deg,
+    #D40505 330deg,
+    #8BE199 360deg
+  );
 }

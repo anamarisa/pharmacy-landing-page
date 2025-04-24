@@ -82,16 +82,16 @@ const features = [
 
 export default function ComparisonTable() {
   return (
-    <section className="px-4 pt-12 mb-40 text-center mx-auto max-w-[1100px]">
+    <section className="px-5 py-8 lg:px-[64px] mt-20 md:mt-[152px] mx-auto text-center">
       {/* Section Heading */}
-      <div className="mb-6 px-4">
+      <div className="mb-4">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
           <img src={FSTILogo} alt="F*STI" className="h-8 sm:h-10" />
           <span className="font-manrope font-semibold text-[24px] sm:text-[28px] md:text-[36px] leading-[32px] sm:leading-[38px] md:leading-[46px] tracking-[-0.03em]">
             vs. Others: What Makes Us Different
           </span>
         </h3>
-        <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 max-w-2xl mx-auto text-center">
+        <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 mx-auto max-w-2xl text-center">
           Compare the features and benefits of F* STI against other providers,
           showcasing our commitment to fast, reliable, and user-friendly
           services.
@@ -99,12 +99,12 @@ export default function ComparisonTable() {
       </div>
 
       {/* CTA Button */}
-      <div className="text-center mx-auto inline-block mb-10">
+      <div className="text-center mx-auto inline-block mb-[54px]">
         <Button>Get Started</Button>
       </div>
 
       {/* Table Container for responsiveness */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto max-w-[1090px] mx-auto">
         <div className="w-auto lg:min-w-[768px] border border-gray-300 rounded-xl overflow-hidden shadow-sm">
           {/* Header Row */}
           <div className="flex bg-gray-100 font-inter font-medium text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] tracking-[-0.04em]">
@@ -123,7 +123,7 @@ export default function ComparisonTable() {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex border-t border-gray-300 items-start"
+              className="flex border-t border-gray-300 items-center"
             >
               {/* Feature Column */}
               <div className="basis-1/2 md:flex-[2] p-4 text-left bg-white flex items-start">
@@ -147,7 +147,7 @@ export default function ComparisonTable() {
               </div>
 
               {/* F*STI Column */}
-              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center">
+              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
                   src={done}
                   alt="Available in F* STI"
@@ -156,7 +156,7 @@ export default function ComparisonTable() {
               </div>
 
               {/* Others Column */}
-              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center">
+              <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
                   src={cancel}
                   alt="Not available in others"

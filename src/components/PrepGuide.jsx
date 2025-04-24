@@ -44,11 +44,11 @@ export default function PrepGuide() {
   ];
 
   return (
-    <section className="px-6 pb-16 mx-auto text-center lg:my-30 max-w-7xl">
+    <section className="px-5 py-8 lg:px-[64px] mt-20 md:mt-[152px] mx-auto text-center ">
       <h3 className="font-manrope mb-4 text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold">
         Your Simple Guide to Staying Protected
       </h3>
-      <p className="font-inter text-[14px] lg:text-[18px] leading-[20px] lg:leading-[28px] font-normal tracking-[-0.03em] text-gray-600">
+      <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600">
         PrEP is a powerful tool against HIV. Follow these six{" "}
         <span>
           <br /> steps for better health.
@@ -59,7 +59,7 @@ export default function PrepGuide() {
         {steps.map(([title, desc], i) => (
           <div
             key={i}
-            className="p-6 bg-white rounded-2xl transition-all duration-[250ms] ease-out hover:bg-gradient-to-b from-[#7C3AED] to-[#2E1065] hover:text-white cursor-pointer group hover:shadow-xl"
+            className="p-6 bg-white rounded-2xl transform transition-all duration-500 ease-in-out hover:scale-[1.02] hover:bg-gradient-to-b from-[#7C3AED] to-[#2E1065] hover:text-white cursor-pointer group hover:shadow-lg"
           >
             <div className="flex justify-center mb-4">
               <img

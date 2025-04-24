@@ -42,7 +42,7 @@ export default function STIAwareness() {
   };
 
   return (
-    <section className="px-4 sm:px-8 lg:px-[64px] py-10 sm:py-6">
+    <section className="px-5 py-8 lg:px-[64px] mt-20 lg:mt-[152px]">
       {/* Desktop Header (hidden on mobile) */}
       <div className="hidden md:flex justify-between items-center mb-8">
         <h3 className="font-manrope text-[36px] leading-[1.2] tracking-[-0.03em] font-semibold">
@@ -94,11 +94,11 @@ export default function STIAwareness() {
             className="text-center cursor-pointer hover:scale-105 transition-transform"
             onClick={() => handleSelect(category.name)}
           >
-            <div className="aspect-square flex items-center justify-center mb-2">
+            <div className="aspect-square flex items-center justify-center mb-2 overflow-hidden">
               <img
                 src={category.image}
                 alt={category.name}
-                className="h-full w-full object-fit"
+                className="h-full w-full object-cover"
                 loading="lazy"
               />
             </div>
