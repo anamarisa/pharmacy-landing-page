@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import QuoteIcon from "../assets/quote.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SectionHeader from "./SectionHeader";
 
 export default function Testimonials() {
   const testimonialsRow1 = [
@@ -83,27 +84,24 @@ export default function Testimonials() {
       {/* Desktop Version */}
       <div>
         <div className="px-5 py-8 lg:px-[64px] mt-20 lg:mt-[152px]">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-8">
-            <div className="hidden md:block text-center lg:text-left basis-[60%]">
-              <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900">
-                <span className="block">
+          <SectionHeader
+            layout="custom"
+            title={
+              <>
+                <span className="hidden md:block">
                   Life-Changing Stories from Our Users
                 </span>
-                <span className="block">Who Took Control of Their Health</span>
-              </h3>
-            </div>
-            {/* Mobile */}
-            <div className="block md:hidden text-center lg:text-left basis-[60%]">
-              <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900">
-                Life-Changing Stories from Our Users Who Took Control of Their
-                Health
-              </h3>
-            </div>
-            <div className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center lg:text-left basis-[40%]">
-              Read experiences from those transformed by Prep. See how it
-              empowers them to protect their health.
-            </div>
-          </div>
+                <span className="hidden md:block">
+                  Who Took Control of Their Health
+                </span>
+                <span className="md:hidden">
+                  Life-Changing Stories from Our Users Who Took Control of Their
+                  Health
+                </span>
+              </>
+            }
+            subtitle="Read experiences from those transformed by Prep. See how it empowers them to protect their health."
+          />
         </div>
 
         {/* Mobile Version */}

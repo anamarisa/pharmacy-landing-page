@@ -5,6 +5,7 @@ import routineIcon from "../assets/icons/stickman.png";
 import safeHabitsIcon from "../assets/icons/calendar.png";
 import followupsIcon from "../assets/icons/check.png";
 import storeIcon from "../assets/icons/hospital.png";
+import SectionHeader from "./SectionHeader";
 
 export default function PrepGuide() {
   const stepIcons = [
@@ -45,15 +46,15 @@ export default function PrepGuide() {
 
   return (
     <section className="px-5 py-8 lg:px-[64px] mt-20 md:mt-[152px] mx-auto text-center ">
-      <h3 className="font-manrope mb-4 text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold">
-        Your Simple Guide to Staying Protected
-      </h3>
-      <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600">
-        PrEP is a powerful tool against HIV. Follow these six{" "}
-        <span>
-          <br /> steps for better health.
-        </span>
-      </p>
+      <SectionHeader
+        title="Your Simple Guide to Staying Protected"
+        subtitle={
+          <>
+            PrEP is a powerful tool against HIV. Follow these six <br /> steps
+            for better health.
+          </>
+        }
+      />
 
       <div className="w-full grid md:grid-cols-3 gap-4 mt-8">
         {steps.map(([title, desc], i) => (

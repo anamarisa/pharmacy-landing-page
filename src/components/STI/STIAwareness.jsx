@@ -4,6 +4,7 @@ import { categoryDetails, categories } from "../../data/categoryDetails";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SectionHeader from "../SectionHeader";
 
 export default function STIAwareness() {
   const [selected, setSelected] = useState(null);
@@ -44,18 +45,23 @@ export default function STIAwareness() {
   return (
     <section className="px-5 py-8 lg:px-[64px] mt-20 lg:mt-[152px]">
       {/* Desktop Header (hidden on mobile) */}
-      <div className="hidden md:flex justify-between items-center mb-8">
-        <h3 className="font-manrope text-[36px] leading-[1.2] tracking-[-0.03em] font-semibold">
-          Understanding the Risks,
-          <br />
-          Taking the Right Steps
-        </h3>
-        <p className="font-inter text-base lg:text-[18px] leading-relaxed font-normal tracking-[-0.03em] text-gray-600 max-w-md">
-          Educate yourself about common STIs to
-          <br />
-          stay safe and make informed decisions.
-        </p>
-      </div>
+      <SectionHeader
+        title={
+          <>
+            Understanding the Risks,
+            <br />
+            Taking the Right Steps
+          </>
+        }
+        subtitle={
+          <>
+            Educate yourself about common STIs to
+            <br />
+            stay safe and make informed decisions.
+          </>
+        }
+        layout="side-by-side"
+      />
 
       {/* Mobile Only - Awards Header */}
       <div className="md:hidden mb-4">

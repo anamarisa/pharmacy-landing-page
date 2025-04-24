@@ -9,7 +9,7 @@ export default function Button({
   ...props
 }) {
   const baseStyles =
-    "cursor-pointer h-[36px] text-[16px] font-semibold rounded-[6px] px-3 py-6 gap-[8px] flex items-center justify-center transition-all duration-300";
+    "cursor-pointer h-[36px] text-[14px] md:text-[16px] font-semibold rounded-[6px] px-2 py-5 md:px-3 md:py-6 gap-[8px] flex items-center justify-center transition-all duration-300";
 
   const variants = {
     primary:

@@ -3,6 +3,7 @@ import image from "../assets/images/image.png";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 import bgEmerald from "../assets/bg-emerald.gif";
+import SectionHeader from "./SectionHeader";
 
 export default function HeroesSection() {
   return (
@@ -20,22 +21,28 @@ export default function HeroesSection() {
       {/* Content Wrapper */}
       <div className="relative z-20 text-center text-white">
         {/* Headings */}
-        <div className="max-w-4xl mx-auto transition-all duration-2000 ease-[cubic-bezier(0.25,1,0.5,1)] hover:opacity-90">
-          <h2 className="font-manrope font-semibold text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] mb-4">
-            Celebrating Everyday Heroes{" "}
-            <span className="block">Who Make a Difference</span>
-          </h2>
-
-          <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-emerald-100 mb-10">
-            Thank you to healthcare workers, educators, and{" "}
-            <span className="block">
-              first responders for their dedication.
-            </span>
-          </p>
+        <div className="transition-all duration-2000 ease-[cubic-bezier(0.25,1,0.5,1)] hover:opacity-90">
+          <SectionHeader
+            layout="center"
+            title={
+              <>
+                Celebrating Everyday Heroes{" "}
+                <span className="block">Who Make a Difference</span>
+              </>
+            }
+            subtitle={
+              <p className="text-emerald-100">
+                Thank you to healthcare workers, educators, and{" "}
+                <span className="block">
+                  first responders for their dedication.
+                </span>
+              </p>
+            }
+          />
         </div>
 
         {/* Images Layout */}
-        <div className="flex justify-center items-end space-x-[-40px] sm:space-x-[-20px] mb-10">
+        <div className="flex justify-center items-end space-x-[-40px] sm:space-x-[-20px] my-10">
           {/* Left Image */}
           <div className="w-[200px] sm:w-[220px] md:w-[260px] h-[280px] md:h-[340px] rounded-2xl overflow-hidden rotate-[-10deg] shadow-lg z-0">
             <img
