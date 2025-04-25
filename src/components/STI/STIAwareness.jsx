@@ -14,6 +14,9 @@ import genitalAnimation from "../../animations/genital.json";
 import trichomonasAnimation from "../../animations/trichomonas.json";
 import mycoplasmaAnimation from "../../animations/mycoplasma.json";
 import ureaplasmaAnimation from "../../animations/ureaplasma.json";
+import gonorheaAnimation from "../../animations/gonorhea.json";
+import chlamydiaAnimation from "../../animations/chlamydia.json";
+import syphilisAnimation from "../../animations/syphilis.json";
 
 export default function STIAwareness() {
   const [selected, setSelected] = useState(null);
@@ -22,9 +25,9 @@ export default function STIAwareness() {
 
   const lottieAnimations = {
     HIV: hivAnimation,
-    Gonorhea: null,
-    Chlamydia: null,
-    Syphilis: null,
+    Gonorhea: gonorheaAnimation,
+    Chlamydia: chlamydiaAnimation,
+    Syphilis: syphilisAnimation,
     Herpes: genitalAnimation,
     "Hepatitis B": herpesAnimation,
     "Genital Warts": hpvAnimation,
@@ -37,32 +40,26 @@ export default function STIAwareness() {
     HIV: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#334155] to-[#475569]",
-      disableEffect: false,
     },
     Gonorhea: {
-      transform: null,
+      transform: "translate(-50%, -45%)",
       bgGradient: "bg-gradient-to-br from-[#065F46] to-[#059669]",
-      disableEffect: true,
     },
     Chlamydia: {
-      transform: null,
+      transform: "translate(-50%, -50%)",
       bgGradient: "bg-gradient-to-br from-[#292524] to-[#57534E]",
-      disableEffect: true,
     },
     Trichomoniasis: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#EA580C] to-[#FB923C]",
-      disableEffect: false,
     },
     Syphilis: {
-      transform: null,
+      transform: "translate(-50%, -50%)",
       bgGradient: "bg-gradient-to-br from-[#2563EB] to-[#3B82F6]",
-      disableEffect: true,
     },
     Herpes: {
       transform: "translate(-50%, -50%)",
       bgGradient: "bg-gradient-to-br from-[#7C3AED] to-[#5B21B6]",
-      disableEffect: false,
     },
     "Hepatitis B": {
       transform: "translate(-50%, -35%)",
@@ -71,17 +68,14 @@ export default function STIAwareness() {
     "Genital Warts": {
       transform: "translate(-55%, -55%)",
       bgGradient: "bg-gradient-to-br from-[#1A2E05] to-[#4D7C0F]",
-      disableEffect: false,
     },
     Ureaplasma: {
       transform: "translate(-50%, -35%)",
       bgGradient: "bg-gradient-to-br from-[#BE123C] to-[#E11D48]",
-      disableEffect: false,
     },
     Mycoplasma: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#DC2626] to-[#6D0909]",
-      disableEffect: false,
     },
   };
 
@@ -243,11 +237,6 @@ export default function STIAwareness() {
                     ? animationStyle.bgGradient + " text-white"
                     : "bg-[#f3f4f7]"
                 }
-                ${
-                  animationStyle?.disableEffect
-                    ? "transform-none !important"
-                    : "hover:scale-[1.02] transition-transform duration-300"
-                }
               `}
               onClick={() => handleSelect(category.name)}
               onMouseEnter={() => setHovered(category.name)}
@@ -256,7 +245,7 @@ export default function STIAwareness() {
               {/* Card Header */}
               <div className="flex justify-between items-start p-6">
                 <h4
-                  className={`text-lg font-semibold capitalize ${
+                  className={`text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
                     isActive ? "text-white" : "text-gray-800"
                   }`}
                 >
@@ -282,8 +271,8 @@ export default function STIAwareness() {
                       top: "10%",
                       left: "50%",
                       transform: animationStyle?.transform,
-                      width: "230px",
-                      height: "230px",
+                      width: "190px",
+                      height: "190px",
                     }}
                   />
                 ) : (
@@ -299,8 +288,8 @@ export default function STIAwareness() {
               {/* Static See More button */}
               {!isActive && (
                 <div className="flex justify-end p-6">
-                  <span className="text-sm font-medium text-dark-violet">
-                    See more
+                  <span className="text-[16px] leading-0.5 font-inter tracking-[-0.02em] font-medium text-neutral">
+                    See More
                   </span>
                 </div>
               )}
