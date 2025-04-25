@@ -1,15 +1,15 @@
 // src/data/categoryDetails.js
-import HIV from "../assets/images/category-images/hiv.png";
-import Gonorhea from "../assets/images/category-images/gonorhea.png";
-import Chlamydia from "../assets/images/category-images/chlamydia.png";
-import Trichomoniasis from "../assets/images/category-images/trichomoniasis.png";
-import Syphilis from "../assets/images/category-images/syphilis.png";
-import Herpes from "../assets/images/category-images/herpes.png";
-import HepatitisB from "../assets/images/category-images/hepatitis.png";
-import GenitalWarts from "../assets/images/category-images/genital-warts.png";
+import HIV from "../assets/images/category-images/hiv.svg";
+import Gonorhea from "../assets/images/category-images/gonorhea.svg";
+import Chlamydia from "../assets/images/category-images/chlamydia.svg";
+import Trichomoniasis from "../assets/images/category-images/trichomoniasis.svg";
+import Syphilis from "../assets/images/category-images/syphilis.svg";
+import Herpes from "../assets/images/category-images/herpes.svg";
+import HepatitisB from "../assets/images/category-images/hepatitis.svg";
+import GenitalWarts from "../assets/images/category-images/genital.svg";
 // import GenitalLottie from "../assets/images/category-images/GENITAL.lottie";
-import Ureaplasma from "../assets/images/category-images/ureaplasma.png";
-import Mycoplasma from "../assets/images/category-images/mycoplasma.png";
+import Ureaplasma from "../assets/images/category-images/ureaplasma.svg";
+import Mycoplasma from "../assets/images/category-images/mycoplasma.svg";
 
 export const categoryDetails = {
   HIV: {
@@ -84,14 +84,14 @@ export const categoryDetails = {
     treatment: "Usually oral medication...",
     sideEffects: "Upset stomach, rash...",
   },
-  // Mycoplasma: {
-  //   image: Mycoplasma,
-  //   description: "Caused by a bacteria-like organism...",
-  //   symptoms: "Burning while urinating...",
-  //   medication: "Antibiotics such as doxycycline...",
-  //   treatment: "Usually oral medication...",
-  //   sideEffects: "Upset stomach, rash...",
-  // },
+  Mycoplasma: {
+    image: Mycoplasma,
+    description: "Caused by a bacteria-like organism...",
+    symptoms: "Burning while urinating...",
+    medication: "Antibiotics such as doxycycline...",
+    treatment: "Usually oral medication...",
+    sideEffects: "Upset stomach, rash...",
+  },
 };
 
 export const categories = Object.entries(categoryDetails).map(([name, data]) => ({
