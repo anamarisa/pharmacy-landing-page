@@ -19,7 +19,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-white px-5 py-16 lg:px-[64px] mt-20 md:mt-[152px] bg-gradient-to-r from-gray-900 to-gray-900/90">
+    <footer className="text-white px-5 py-16 lg:px-[64px] mt-[80px] md:mt-[152px] bg-gradient-to-r from-gray-900 to-gray-900/90">
       <div className="flex flex-col md:flex-row justify-between text-center md:text-left">
         {/* Brand Section */}
         <div className="font-inter mb-8 md:mb-0">

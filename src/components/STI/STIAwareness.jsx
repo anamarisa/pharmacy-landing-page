@@ -43,9 +43,10 @@ export default function STIAwareness() {
   };
 
   return (
-    <section className="px-5 py-8 lg:px-[64px] mt-20 lg:mt-[152px]">
+    <section className="px-5 lg:px-[64px] mt-[152px]">
       {/* Desktop Header (hidden on mobile) */}
       <SectionHeader
+        layout="side-by-side"
         title={
           <>
             Understanding the Risks,
@@ -60,14 +61,27 @@ export default function STIAwareness() {
             stay safe and make informed decisions.
           </>
         }
-        layout="side-by-side"
       />
 
       {/* Mobile Only - Awards Header */}
       <div className="md:hidden mb-4">
-        <h3 className="font-manrope text-[30px] lg:text-[36px] sm:text-3xl leading-[1.2] tracking-[-0.03em] font-semibold text-center">
-          Our Awards & Credentials
-        </h3>
+        <SectionHeader
+          layout="center"
+          title={
+            <>
+              Understanding the Risks,
+              <br />
+              Taking the Right Steps
+            </>
+          }
+          subtitle={
+            <>
+              Educate yourself about common STIs to
+              <br />
+              stay safe and make informed decisions.
+            </>
+          }
+        />
       </div>
 
       {/* Mobile Slider */}
@@ -76,7 +90,7 @@ export default function STIAwareness() {
           {categories.map((category) => (
             <div
               key={category.name}
-              className="px-2 py-4 text-center cursor-pointer"
+              className="cursor-pointer"
               onClick={() => handleSelect(category.name)}
             >
               <div className="flex items-center justify-center mb-2">

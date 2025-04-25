@@ -65,7 +65,7 @@ export default function Testimonials() {
   // Fixed card dimensions
   const Card = ({ text }) => (
     <div className="px-2">
-      <div className="h-[280px] md:h-[246px] w-full text-sm md:text-[18px] flex flex-col justify-between bg-gradient-to-b from-[#7C3AED] to-[#2E1065] text-white p-6 rounded-xl shadow-md">
+      <div className="h-[300px] md:h-[246px] w-full text-sm md:text-[18px] flex flex-col justify-between bg-gradient-to-b from-[#7C3AED] to-[#2E1065] text-white p-6 rounded-xl shadow-md">
         <div>
           <img
             src={QuoteIcon}
@@ -80,10 +80,10 @@ export default function Testimonials() {
   );
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       {/* Desktop Version */}
       <div>
-        <div className="px-5 py-8 lg:px-[64px] mt-20 lg:mt-[152px]">
+        <div className="px-5 pt-8 lg:px-[64px] mt-[152px]">
           <SectionHeader
             layout="custom"
             title={
@@ -105,7 +105,7 @@ export default function Testimonials() {
         </div>
 
         {/* Mobile Version */}
-        <div className="md:hidden px-4">
+        <div className="md:hidden px-5">
           <div className="mx-auto">
             <Slider {...mobileSettings}>
               {[...testimonialsRow1, ...testimonialsRow2].map((text, i) => (

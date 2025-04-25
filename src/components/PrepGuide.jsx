@@ -45,7 +45,7 @@ export default function PrepGuide() {
   ];
 
   return (
-    <section className="px-5 py-8 lg:px-[64px] mt-20 md:mt-[152px] mx-auto text-center ">
+    <section className="px-5 lg:px-[64px] mt-[152px] mx-auto text-center ">
       <SectionHeader
         title="Your Simple Guide to Staying Protected"
         subtitle={

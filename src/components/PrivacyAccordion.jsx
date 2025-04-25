@@ -71,9 +71,9 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="px-5 py-8 lg:p-[64px] mt-20 md:mt-[152px] custom-gradient-bg">
+    <section className="px-5 py-8 lg:p-[64px] mt-[152px] custom-gradient-bg">
       {/* Heading at the very top */}
-      <h3 className="font-manrope text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold mb-3 text-center md:text-left">
+      <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900 mb-3 text-center md:text-left">
         Fight STIs with Ease and Confidence
       </h3>
 
@@ -81,7 +81,7 @@ export default function PrivacyAccordion() {
         {/* Text Content Column */}
         <div className="order-1 md:order-1">
           <div className="flex flex-col h-full">
-            <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center md:text-left">
+            <p className="font-inter text-[16px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center md:text-left">
               Through our providers and your insurance, you have options to
               protect your health and control your future.
             </p>
