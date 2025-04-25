@@ -33,7 +33,7 @@ export default function SubscriptionSection() {
   };
 
   return (
-    <section className="relative px-4 sm:px-6 md:px-12 h-[512px] md:h-[460px] lg:px-16 my-[152px] rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
+    <section className="relative px-4 sm:px-6 md:px-12 h-[512px] md:h-[460px] lg:px-16 mt-[90px] lg:mt-[152px] rounded-3xl overflow-hidden max-w-[1312px] mx-auto">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <Slider {...settings}>
@@ -53,10 +53,10 @@ export default function SubscriptionSection() {
       {/* Subscription Form - Mobile Bottom Position */}
       <div className="absolute z-10 bottom-4 left-1/2 transform -translate-x-1/2 w-full px-4 md:hidden">
         <div className="bg-white p-5 rounded-xl shadow-lg w-full max-w-[340px] mx-auto text-center">
-          <h3 className="font-inter font-bold text-[18px] leading-[24px] tracking-[-0.03em] text-gray-900 mb-3">
+          <h3 className="font-inter font-bold text-[22px] leading-[24px] tracking-[-0.03em] text-gray-900 mb-3">
             Upgrade Your Health Game
           </h3>
-          <p className="font-inter font-normal text-gray-500 text-[14px] leading-[22px] tracking-[-0.03em] mb-4">
+          <p className="font-inter font-normal text-gray-500 text-[16px] leading-[22px] tracking-[-0.03em] mb-4">
             Be the first to know about new launches, exclusive deals, and expert
             health tips—delivered straight to your inbox.
           </p>
@@ -64,10 +64,10 @@ export default function SubscriptionSection() {
           <div className="space-y-3">
             <input
               type="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-[16px]"
               placeholder="name@domain.com"
             />
-            <button className="w-full cursor-pointer bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
+            <button className="w-full cursor-pointer bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-[16px]">
               Sign me up
             </button>
           </div>

@@ -87,11 +87,11 @@ export default function ComparisonTable() {
       <div className="mb-4">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
           <img src={FSTILogo} alt="F*STI" className="h-8 sm:h-10" />
-          <span className="font-manrope font-semibold text-[24px] sm:text-[28px] md:text-[36px] leading-[32px] sm:leading-[38px] md:leading-[46px] tracking-[-0.03em]">
+          <span className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[32px] sm:leading-[38px] md:leading-[46px] tracking-[-0.03em]">
             vs. Others: What Makes Us Different
           </span>
         </h3>
-        <p className="font-inter text-[15px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 mx-auto max-w-2xl text-center">
+        <p className="font-inter text-[16px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 mx-auto max-w-2xl text-center">
           Compare the features and benefits of F* STI against other providers,
           showcasing our commitment to fast, reliable, and user-friendly
           services.

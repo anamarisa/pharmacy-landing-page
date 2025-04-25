@@ -83,7 +83,7 @@ export default function Testimonials() {
     <div className="bg-white">
       {/* Desktop Version */}
       <div>
-        <div className="px-5 pt-8 lg:px-[64px] mt-[152px]">
+        <div className="px-5 lg:pt-8 lg:px-[64px] mt-[80px] lg:mt-[152px]">
           <SectionHeader
             layout="custom"
             title={

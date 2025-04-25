@@ -71,17 +71,17 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="px-5 py-8 lg:p-[64px] mt-[152px] custom-gradient-bg">
+    <section className="min-h-screen px-5 py-8 lg:p-[64px] mt-[152px] custom-gradient-bg">
       {/* Heading at the very top */}
-      <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900 mb-3 text-center md:text-left">
+      <h3 className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900 mb-3 text-center md:text-left">
         Fight STIs with Ease and Confidence
       </h3>
 
-      <div className="grid md:grid-cols-2 gap-8 items-start">
+      <div className="grid md:grid-cols-2 gap-8">
         {/* Text Content Column */}
         <div className="order-1 md:order-1">
           <div className="flex flex-col h-full">
-            <p className="font-inter text-[16px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center md:text-left">
+            <p className="font-inter text-[18px] sm:text-[18px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center md:text-left">
               Through our providers and your insurance, you have options to
               protect your health and control your future.
             </p>
@@ -105,7 +105,7 @@ export default function PrivacyAccordion() {
                     {/* Title and Toggle */}
                     <div className="flex-grow flex justify-between items-end">
                       <span
-                        className={`font-semibold mt-4 text-lg sm:text-xl md:text-2xl leading-snug tracking-tight transition-colors ${
+                        className={`font-semibold mt-4 text-xl sm:text-2xl md:text-2xl leading-snug tracking-tight transition-colors ${
                           activeIndex === index
                             ? "text-violet-600"
                             : "text-black"
@@ -130,7 +130,7 @@ export default function PrivacyAccordion() {
                       activeIndex === index
                         ? "max-h-[500px] opacity-100 mt-2"
                         : "max-h-0 opacity-0"
-                    } font-inter text-sm sm:text-base leading-relaxed text-gray-700`}
+                    } font-inter text-lg leading-[24px] tracking-[-0.02em] text-gray-700`}
                   >
                     <p className="pr-4">{item.content}</p>
                   </div>
@@ -146,7 +146,7 @@ export default function PrivacyAccordion() {
             <img
               src={getImageForIndex(activeIndex)}
               alt="Visual"
-              className="w-full h-auto rounded-2xl sm:rounded-3xl object-contain transition-all duration-500 ease-in-out"
+              className="mx-auto w-[330px] md:w-full h-auto rounded-2xl sm:rounded-3xl object-contain transition-all duration-500 ease-in-out"
             />
           </div>
         </div>

@@ -50,8 +50,8 @@ export default function PrepGuide() {
         title="Your Simple Guide to Staying Protected"
         subtitle={
           <>
-            PrEP is a powerful tool against HIV. Follow these six <br /> steps
-            for better health.
+            PrEP is a powerful tool against HIV. Follow these six{" "}
+            <br className="hidden lg:block md:block" /> steps for better health.
           </>
         }
       />
@@ -72,7 +72,7 @@ export default function PrepGuide() {
             <h4 className="font-inter font-semibold text-neutral text-[20px] lg:text-[24px] leading-[28px] lg:leading-[32px] tracking-[-0.02em] mb-2 group-hover:text-white transition-colors duration-[250ms] ease-out">
               {title}
             </h4>
-            <p className="font-inter font-normal text-gray-500 text-[14px] leading-[20px] lg:text-[16px] lg:leading-[24px] tracking-[-0.02em] group-hover:text-white transition-colors duration-[250ms] ease-out">
+            <p className="font-inter font-normal text-gray-500 text-[15px] leading-[20px] lg:text-[16px] lg:leading-[24px] tracking-[-0.02em] group-hover:text-white transition-colors duration-[250ms] ease-out">
               {desc}
             </p>
           </div>

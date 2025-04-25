@@ -18,11 +18,11 @@ export default function SectionHeader({ title, subtitle, layout = "center" }) {
     return (
       <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-8">
         <div className="text-center lg:text-left basis-[60%]">
-          <h3 className="font-manrope font-semibold text-[28px] sm:text-[30px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900">
+          <h3 className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900">
             {title}
           </h3>
         </div>
-        <div className="font-inter text-[16px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center lg:text-left basis-[40%]">
+        <div className="font-inter text-[18px] sm:text-[18px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center lg:text-left basis-[40%]">
           {subtitle}
         </div>
       </div>
@@ -32,10 +32,10 @@ export default function SectionHeader({ title, subtitle, layout = "center" }) {
   // default center layout
   return (
     <div className="text-center mb-8">
-      <h3 className="font-manrope mb-4 text-[28px] sm:text-[30px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold">
+      <h3 className="font-manrope mb-4 text-[30px] sm:text-[32px] lg:text-[36px] leading-[32px] lg:leading-[46px] tracking-[-0.03em] font-semibold">
         {title}
       </h3>
-      <p className="font-inter text-[16px] sm:text-[16px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600">
+      <p className="font-inter text-[18px] sm:text-[18px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600">
         {subtitle}
       </p>
     </div>
