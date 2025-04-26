@@ -3,12 +3,12 @@ import Button from "./common/Button";
 import FSTILogo from "../assets/F_STI.svg";
 import cancel from "../assets/cancel.svg";
 import done from "../assets/done.svg";
-import Icon1 from "../assets/table-icons/icon1.png";
-import Icon2 from "../assets/table-icons/icon2.png";
-import Icon3 from "../assets/table-icons/icon3.png";
-import Icon4 from "../assets/table-icons/icon4.png";
-import Icon5 from "../assets/table-icons/icon5.png";
-import Icon6 from "../assets/table-icons/icon6.png";
+import Icon1 from "../assets/table-icons/icon1.svg";
+import Icon2 from "../assets/table-icons/icon2.svg";
+import Icon3 from "../assets/table-icons/icon3.svg";
+import Icon4 from "../assets/table-icons/icon4.svg";
+import Icon5 from "../assets/table-icons/icon5.svg";
+import Icon6 from "../assets/table-icons/icon6.svg";
 
 const features = [
   {

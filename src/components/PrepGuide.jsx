@@ -1,20 +1,20 @@
 import React from "react";
-import consultIcon from "../assets/icons/plus.png";
-import prescribedIcon from "../assets/icons/pill.png";
-import routineIcon from "../assets/icons/stickman.png";
-import safeHabitsIcon from "../assets/icons/calendar.png";
-import followupsIcon from "../assets/icons/check.png";
-import storeIcon from "../assets/icons/hospital.png";
+import consultIcon from "../assets/icons/plus.svg";
+import prescribedIcon from "../assets/icons/pill.svg";
+import routineIcon from "../assets/icons/stickman.svg";
+import safeHabitsIcon from "../assets/icons/calendar.svg";
+import storeIcon from "../assets/icons/check.svg";
+import hospitalIcon from "../assets/icons/hospital.svg";
 import SectionHeader from "./SectionHeader";
 
 export default function PrepGuide() {
   const stepIcons = [
-    { icon: consultIcon, alt: "Consultation" },
+    { icon: hospitalIcon, alt: "Hospital" },
     { icon: prescribedIcon, alt: "Prescription" },
-    { icon: routineIcon, alt: "Daily routine" },
     { icon: safeHabitsIcon, alt: "Safe habits" },
-    { icon: followupsIcon, alt: "Medical followup" },
-    { icon: storeIcon, alt: "Medication storage" },
+    { icon: routineIcon, alt: "Daily routine" },
+    { icon: consultIcon, alt: "Consultation" },
+    { icon: storeIcon, alt: "Store safely" },
   ];
 
   const steps = [
