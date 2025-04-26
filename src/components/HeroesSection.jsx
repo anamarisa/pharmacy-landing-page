@@ -31,12 +31,12 @@ export default function HeroesSection() {
               </>
             }
             subtitle={
-              <p className="text-emerald-100">
+              <div className="text-emerald-100">
                 Thank you to healthcare workers, educators, and{" "}
                 <span className="block">
                   first responders for their dedication.
                 </span>
-              </p>
+              </div>
             }
           />
         </div>
