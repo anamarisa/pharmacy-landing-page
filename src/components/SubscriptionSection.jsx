@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import your local images
-import bg1 from "../assets/images/bg-images/bg1.png";
-import bg2 from "../assets/images/bg-images/bg2.png";
-import bg3 from "../assets/images/bg-images/bg3.png";
+import bg1 from "../assets/images/bg-images/bg1.svg";
+import bg2 from "../assets/images/bg-images/bg2.svg";
+import bg3 from "../assets/images/bg-images/bg3.svg";
 
 const backgroundImages = [bg1, bg2, bg3];
 

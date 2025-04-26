@@ -4,14 +4,14 @@ import { useRef, useEffect } from "react";
 import Button from "./common/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import frame1 from "../assets/images/frame1.png";
-import frame2 from "../assets/images/frame2.png";
-import frame3 from "../assets/images/frame3.png";
-import frame4 from "../assets/images/frame4.png";
-import frame5 from "../assets/images/frame5.png";
-import frame6 from "../assets/images/frame6.png";
-import frame7 from "../assets/images/frame7.png";
-import frame8 from "../assets/images/frame8.png";
+import frame1 from "../assets/images/frame1.svg";
+import frame2 from "../assets/images/frame2.svg";
+import frame3 from "../assets/images/frame3.svg";
+import frame4 from "../assets/images/frame4.svg";
+import frame5 from "../assets/images/frame5.svg";
+import frame6 from "../assets/images/frame6.svg";
+import frame7 from "../assets/images/frame7.svg";
+import frame8 from "../assets/images/frame8.svg";
 
 export default function HeroSection({ scrollToComparison }) {
   const keywordSliderRef = useRef(null);
@@ -134,9 +134,7 @@ export default function HeroSection({ scrollToComparison }) {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button onClick={scrollToComparison}>
-            Get Started
-          </Button>
+          <Button onClick={scrollToComparison}>Get Started</Button>
           <Button variant="secondary" className="hidden sm:flex">
             Why F*STI
           </Button>

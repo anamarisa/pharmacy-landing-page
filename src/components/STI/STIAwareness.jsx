@@ -40,42 +40,71 @@ export default function STIAwareness() {
     HIV: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#334155] to-[#475569]",
+      size: { width: "220px", height: "220px" },
     },
     Gonorhea: {
-      transform: "translate(-50%, -45%)",
+      transform: "translate(-55%, -40%)",
       bgGradient: "bg-gradient-to-br from-[#065F46] to-[#059669]",
+      size: { width: "160px", height: "160px" },
+      imageLeft: "30%",
     },
     Chlamydia: {
-      transform: "translate(-50%, -50%)",
+      transform: "translate(-50%, -40%)",
       bgGradient: "bg-gradient-to-br from-[#292524] to-[#57534E]",
+      size: { width: "180px", height: "180px" },
+      imageSize: { width: "160px", height: "160px" },
+      imageTop: "-50%",
+      imageLeft: "15%",
     },
     Trichomoniasis: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#EA580C] to-[#FB923C]",
+      size: { width: "240px", height: "240px" },
     },
     Syphilis: {
-      transform: "translate(-50%, -50%)",
+      transform: "translate(-50%, -30%)",
       bgGradient: "bg-gradient-to-br from-[#2563EB] to-[#3B82F6]",
+      size: { width: "140px", height: "140px" },
+      imageSize: { width: "130px", height: "130px" },
+      imageTop: "-20%",
+      imageLeft: "20%",
     },
     Herpes: {
-      transform: "translate(-50%, -50%)",
+      transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#7C3AED] to-[#5B21B6]",
+      size: { width: "280px", height: "280px" },
+      imageTop: "-10%",
+      imageLeft: "30%",
     },
     "Hepatitis B": {
-      transform: "translate(-50%, -35%)",
+      transform: "translate(-50%, -40%)",
       bgGradient: "bg-gradient-to-br from-[#422006] to-[#7F3E0C]",
+      size: { width: "280px", height: "280px" },
+      imageSize: { width: "135px", height: "135px" },
+      imageTop: "-20%",
+      imageLeft: "20%",
     },
     "Genital Warts": {
-      transform: "translate(-55%, -55%)",
+      transform: "translate(-50%, -70%)",
       bgGradient: "bg-gradient-to-br from-[#1A2E05] to-[#4D7C0F]",
+      size: { width: "280px", height: "280px" },
+      imageSize: { width: "135px", height: "135px" },
+      imageTop: "-25%",
+      imageLeft: "20%",
     },
     Ureaplasma: {
       transform: "translate(-50%, -35%)",
       bgGradient: "bg-gradient-to-br from-[#BE123C] to-[#E11D48]",
+      imageTop: "-3%",
+      imageLeft: "28%",
     },
     Mycoplasma: {
       transform: "translate(-50%, -60%)",
       bgGradient: "bg-gradient-to-br from-[#DC2626] to-[#6D0909]",
+      size: { width: "280px", height: "280px" },
+      imageSize: { width: "120px", height: "120px" },
+      imageTop: "-5%",
+      imageLeft: "20%",
     },
   };
 
@@ -104,7 +133,7 @@ export default function STIAwareness() {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.8,
           slidesToScroll: 1,
         },
       },
@@ -156,65 +185,89 @@ export default function STIAwareness() {
       {/* Mobile Slider */}
       <div className="md:hidden">
         <Slider {...sliderSettings} className="mb-12">
-          {categories.map((category) => (
-            <div
-              key={category.name}
-              className="cursor-pointer"
-              onClick={() => handleSelect(category.name)}
-            >
+          {categories.map((category) => {
+            const isActive =
+              hovered === category.name || selected === category.name;
+            const animationStyle = animationStyles[category.name];
+
+            return (
               <div
-                className={`relative bg-[#f3f4f7] w-full h-[200px] rounded-xl flex flex-col justify-between transition-colors duration-200 ${
-                  hovered === category.name || selected === category.name
-                    ? "bg-red-400 text-white"
-                    : ""
-                }`}
-                onMouseEnter={() => setHovered(category.name)}
-                onMouseLeave={() => setHovered(null)}
+                key={category.name}
+                className="px-2" // Add padding between slides
+                onClick={() => handleSelect(category.name)}
               >
-                {/* Card Header */}
-                <div className="flex justify-between items-start p-4">
-                  <h4
-                    className={`text-lg font-semibold capitalize ${
-                      hovered === category.name || selected === category.name
-                        ? "text-white"
-                        : "text-gray-800"
+                <div
+                  className={`
+                    relative w-full h-[236px] rounded-xl flex flex-col justify-between cursor-pointer transition-colors duration-200
+                    ${
+                      isActive && animationStyle?.bgGradient
+                        ? animationStyle.bgGradient + " text-white"
+                        : "bg-[#f3f4f7]"
+                    }
+                  `}
+                  onMouseEnter={() => setHovered(category.name)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  {/* Card Header */}
+                  <div className="flex justify-between items-start p-6">
+                    <h4
+                      className={`text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
+                        isActive ? "text-white" : "text-gray-800"
+                      }`}
+                    >
+                      {category.name}
+                    </h4>
+                  </div>
+
+                  {/* Image / Animation */}
+                  <div
+                    className={`flex-1 flex items-center justify-center px-4 relative ${
+                      isActive ? "overflow-visible" : "overflow-hidden"
                     }`}
                   >
-                    {category.name}
-                  </h4>
-                </div>
+                    {isActive && lottieAnimations[category.name] ? (
+                      <Player
+                        autoplay
+                        loop
+                        src={lottieAnimations[category.name]}
+                        style={{
+                          position: "absolute",
+                          top: "10%",
+                          left: "50%",
+                          transform: animationStyle?.transform,
+                          width: animationStyle?.size?.width || "190px",
+                          height: animationStyle?.size?.height || "190px",
+                        }}
+                      />
+                    ) : (
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        style={{
+                          width: animationStyle?.imageSize?.width || "100px",
+                          height: animationStyle?.imageSize?.height || "100px",
+                          position: "absolute",
+                          top: animationStyle?.imageTop || "0%",
+                          left: animationStyle?.imageLeft || "25%",
+                          objectFit: "contain",
+                        }}
+                        loading="lazy"
+                      />
+                    )}
+                  </div>
 
-                {/* Image / Animation */}
-                <div className="flex-1 flex items-center justify-center relative overflow-hidden">
-                  {(hovered === category.name || selected === category.name) &&
-                  lottieAnimations[category.name] ? (
-                    <Player
-                      autoplay
-                      loop
-                      src={lottieAnimations[category.name]}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  ) : (
-                    <img
-                      src={category.image}
-                      alt={category.name}
-                      className="w-[full] h-[full] object-contain"
-                      loading="lazy"
-                    />
+                  {/* Static See More button */}
+                  {!isActive && (
+                    <div className="flex justify-end p-6">
+                      <span className="text-[16px] leading-0.5 font-inter tracking-[-0.02em] font-medium text-neutral">
+                        See More
+                      </span>
+                    </div>
                   )}
                 </div>
-
-                {/* Static See More button - hidden on hover/select */}
-                {!(hovered === category.name || selected === category.name) && (
-                  <div className="flex justify-end p-4">
-                    <span className="text-sm font-medium text-dark-violet">
-                      See more
-                    </span>
-                  </div>
-                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </Slider>
       </div>
 
@@ -224,8 +277,6 @@ export default function STIAwareness() {
           const isActive =
             hovered === category.name || selected === category.name;
           const animationStyle = animationStyles[category.name];
-
-          console.log(category.name, animationStyle?.disableEffect);
 
           return (
             <div
@@ -259,9 +310,7 @@ export default function STIAwareness() {
                   isActive ? "overflow-visible" : "overflow-hidden"
                 }`}
               >
-                {isActive &&
-                lottieAnimations[category.name] &&
-                !animationStyle?.disableEffect ? (
+                {isActive && lottieAnimations[category.name] ? (
                   <Player
                     autoplay
                     loop
@@ -271,15 +320,22 @@ export default function STIAwareness() {
                       top: "10%",
                       left: "50%",
                       transform: animationStyle?.transform,
-                      width: "190px",
-                      height: "190px",
+                      width: animationStyle?.size?.width || "190px",
+                      height: animationStyle?.size?.height || "190px",
                     }}
                   />
                 ) : (
                   <img
                     src={category.image}
                     alt={category.name}
-                    className="object-contain w-full h-full"
+                    style={{
+                      width: animationStyle?.imageSize?.width || "100px",
+                      height: animationStyle?.imageSize?.height || "100px",
+                      position: "absolute",
+                      top: animationStyle?.imageTop || "0%",
+                      left: animationStyle?.imageLeft || "25%",
+                      objectFit: "contain",
+                    }}
                     loading="lazy"
                   />
                 )}

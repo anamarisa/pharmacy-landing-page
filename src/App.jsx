@@ -7,11 +7,9 @@ import LandingPage from "./components/LandingPage";
 
 export default function App() {
   return (
-    <div className="max-w-[1440px] mx-auto">
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/sti-awareness/:categoryName" element={<PrepPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/sti-awareness/:categoryName" element={<PrepPage />} />
+    </Routes>
   );
 }
