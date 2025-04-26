@@ -11,6 +11,7 @@ import frame6 from "../assets/images/blog-images/frame6.svg";
 import frame7 from "../assets/images/blog-images/frame7.svg";
 import frame8 from "../assets/images/blog-images/frame8.svg";
 import frame9 from "../assets/images/blog-images/frame9.svg";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -79,16 +80,16 @@ const cards = [
   },
 ];
 
-console.log(cards);
-
 const Card = ({ image, date, title, subtitle }) => {
   return (
     <div className="font-inter overflow-hidden">
-      <img
-        src={image}
-        alt="Card Image"
-        className="w-full h-70 object-cover rounded-2xl"
-      />
+      <Link to="/blog/post/:slug">
+        <img
+          src={image}
+          alt="Card Image"
+          className="w-full h-70 object-cover rounded-2xl"
+        />
+      </Link>
       <p className="text-sm text-gray-500 mt-3 mb-[6px]">{date}</p>
       <h3 className="text-2xl leading-[32px] tracking-[-0.02em] font-semibold my-[6px]">
         {title}
@@ -121,6 +122,7 @@ export default function Blog() {
         {cards.map((card, index) => (
           <Card
             key={index}
+            date={card.date}
             image={card.image}
             title={card.title}
             subtitle={card.subtitle}
