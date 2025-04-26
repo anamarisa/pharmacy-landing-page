@@ -130,6 +130,7 @@ export default function STIAwareness() {
     slidesToShow: 2.2,
     slidesToScroll: 1,
     centerMode: false,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 640,
@@ -273,7 +274,7 @@ export default function STIAwareness() {
       </div>
 
       {/* Desktop Grid (hidden on mobile) */}
-      <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+      <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4 auto-rows-fr">
         {categories.map((category) => {
           const isActive =
             hovered === category.name || selected === category.name;
@@ -283,7 +284,7 @@ export default function STIAwareness() {
             <div
               key={category.name}
               className={`
-                relative w-[236px] h-[236px] rounded-xl flex flex-col justify-between cursor-pointer transition-colors duration-200
+                relative h-full min-h-[236px] rounded-xl flex flex-col justify-between cursor-pointer transition-all duration-200
                 ${
                   isActive && animationStyle?.bgGradient
                     ? animationStyle.bgGradient + " text-white"
@@ -305,12 +306,8 @@ export default function STIAwareness() {
                 </h4>
               </div>
 
-              {/* Image / Animation */}
-              <div
-                className={`flex-1 flex items-center justify-center px-4 relative ${
-                  isActive ? "overflow-visible" : "overflow-hidden"
-                }`}
-              >
+              {/* Image/Animation Container - Made consistent */}
+              <div className="flex-1 min-h-[120px] relative">
                 {isActive && lottieAnimations[category.name] ? (
                   <Player
                     autoplay
@@ -318,9 +315,11 @@ export default function STIAwareness() {
                     src={lottieAnimations[category.name]}
                     style={{
                       position: "absolute",
-                      top: "10%",
+                      top: "50%",
                       left: "50%",
-                      transform: animationStyle?.transform,
+                      transform: `${
+                        animationStyle?.transform || "translate(-50%, -50%)"
+                      }`,
                       width: animationStyle?.size?.width || "190px",
                       height: animationStyle?.size?.height || "190px",
                     }}
@@ -329,12 +328,10 @@ export default function STIAwareness() {
                   <img
                     src={category.image}
                     alt={category.name}
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     style={{
                       width: animationStyle?.imageSize?.width || "100px",
                       height: animationStyle?.imageSize?.height || "100px",
-                      position: "absolute",
-                      top: animationStyle?.imageTop || "0%",
-                      left: animationStyle?.imageLeft || "25%",
                       objectFit: "contain",
                     }}
                     loading="lazy"
@@ -342,14 +339,13 @@ export default function STIAwareness() {
                 )}
               </div>
 
-              {/* Static See More button */}
-              {!isActive && (
-                <div className="flex justify-end p-6">
-                  <span className="text-[16px] leading-0.5 font-inter tracking-[-0.02em] font-medium text-neutral">
+              <div className={`p-6 ${isActive ? "invisible" : ""}`}>
+                <div className="flex justify-end">
+                  <span className="text-[16px] font-inter tracking-[-0.02em] leading-[24px] font-medium text-neutral">
                     See More
                   </span>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

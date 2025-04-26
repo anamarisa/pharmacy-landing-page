@@ -10,7 +10,7 @@ import nnrtisIcon from "../assets/icons/nnrtis.png";
 import pisIcon from "../assets/icons/pis.png";
 import instisIcon from "../assets/icons/instis.png";
 import bgPrep from "../assets/images/bg-images/bg-prep.png";
-import hivAnimation from "../assets/images/hiv-animation.gif";
+import hivAnimation from "../animations/hiv.json";
 
 export default function PrepPage() {
   const { categoryName } = useParams();
@@ -44,24 +44,28 @@ export default function PrepPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 w-full">
-        {/* PrEP Section */}
-        <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[400px]">
-          <img src={bgPrep} alt="PrEP" className="w-full h-full object-cover" />
-          {/* Overlay transparan */}
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
+      <section className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[400px]">
+        {/* Background Image */}
+        <img src={bgPrep} alt="PrEP" className="w-full h-full object-cover" />
+
+        {/* Overlay transparan */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content */}
+        <div className="absolute inset-0 grid grid-cols-2">
+          {/* PrEP */}
+          <div className="flex items-center justify-center border-r border-white/30">
             <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
               PrEP
             </h2>
           </div>
-        </div>
 
-        {/* PEP Section */}
-        <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-white flex items-center justify-center h-[300px] lg:h-[400px]">
-          <h2 className="text-gray-800 text-4xl sm:text-5xl font-bold tracking-tight">
-            PEP
-          </h2>
+          {/* PEP */}
+          <div className="flex items-center justify-center">
+            <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
+              PEP
+            </h2>
+          </div>
         </div>
       </section>
 
