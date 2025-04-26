@@ -10,7 +10,7 @@ import nnrtisIcon from "../assets/icons/nnrtis.png";
 import pisIcon from "../assets/icons/pis.png";
 import instisIcon from "../assets/icons/instis.png";
 import bgPrep from "../assets/images/bg-images/bg-prep.png";
-import hivAnimation from "../animations/hiv.json";
+import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
   const { categoryName } = useParams();
