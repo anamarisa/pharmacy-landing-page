@@ -127,13 +127,14 @@ export default function STIAwareness() {
     arrows: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 2.2,
     slidesToScroll: 1,
+    centerMode: false,
     responsive: [
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1.8,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
         },
       },
@@ -193,12 +194,12 @@ export default function STIAwareness() {
             return (
               <div
                 key={category.name}
-                className="px-2" // Add padding between slides
+                className="px-2 h-full"
                 onClick={() => handleSelect(category.name)}
               >
                 <div
                   className={`
-                    relative w-full h-[236px] rounded-xl flex flex-col justify-between cursor-pointer transition-colors duration-200
+                    relative w-full h-[220px] rounded-xl flex flex-col justify-between cursor-pointer transition-colors duration-200
                     ${
                       isActive && animationStyle?.bgGradient
                         ? animationStyle.bgGradient + " text-white"
@@ -209,9 +210,9 @@ export default function STIAwareness() {
                   onMouseLeave={() => setHovered(null)}
                 >
                   {/* Card Header */}
-                  <div className="flex justify-between items-start p-6">
+                  <div className="flex justify-between items-start p-4 sm:p-5">
                     <h4
-                      className={`text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
+                      className={`text-[16px] font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
                         isActive ? "text-white" : "text-gray-800"
                       }`}
                     >
@@ -272,7 +273,7 @@ export default function STIAwareness() {
       </div>
 
       {/* Desktop Grid (hidden on mobile) */}
-      <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-4 mt-4">
+      <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
         {categories.map((category) => {
           const isActive =
             hovered === category.name || selected === category.name;

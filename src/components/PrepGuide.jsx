@@ -66,7 +66,7 @@ export default function PrepGuide() {
               <img
                 src={stepIcons[i].icon}
                 alt={`${title} icon`}
-                className="w-[30px] h-[32px] lg:h-[48px] lg:w-[58px] object-contain transition duration-[250ms] ease-out group-hover:brightness-0 group-hover:invert"
+                className="w-[40px] h-[50px] lg:h-[48px] lg:w-[58px] object-contain transition duration-[250ms] ease-out group-hover:brightness-0 group-hover:invert"
               />
             </div>
             <h4 className="font-inter font-semibold text-neutral text-[20px] lg:text-[24px] leading-[28px] lg:leading-[32px] tracking-[-0.02em] mb-2 group-hover:text-white transition-colors duration-[250ms] ease-out">

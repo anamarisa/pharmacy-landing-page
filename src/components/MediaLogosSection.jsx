@@ -14,11 +14,11 @@ export default function MediaLogosSection() {
 
   return (
     <section className="bg-light-orange px-5 py-8 lg:p-[64px] mt-[152px]">
-      <div className="flex flex-wrap justify-center items-center gap-x-[70px] gap-y-[24px]">
+      <div className="flex flex-wrap justify-center items-center gap-x-[50px] lg:gap-x-[70px] gap-y-[24px]">
         {mediaLogos.map((media, index) => (
           <div
             key={index}
-            className="w-[160px] h-[80px] flex items-center justify-center"
+            className="w-[140px] lg:w-[160px] h-[80px] flex items-center justify-center"
           >
             <img
               src={media.src}

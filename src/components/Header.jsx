@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   const navItems = [
+    { label: "Blog", href: "/blog" },
     { label: "PrEP", href: "/" },
     { label: "Education", href: "#" },
     { label: "Medications", href: "#" },
