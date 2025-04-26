@@ -149,18 +149,18 @@ export default function ComparisonTable() {
               {/* F*STI Column */}
               <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
-                  src={done}
+                  src={cancel}
                   alt="Available in F* STI"
-                  className="w-6 h-6 object-contain"
+                  className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
                 />
               </div>
 
               {/* Others Column */}
               <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
-                  src={cancel}
+                  src={done}
                   alt="Not available in others"
-                  className="w-6 h-6 object-contain"
+                  className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
                 />
               </div>
             </div>

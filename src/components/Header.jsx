@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.png";
-import cartIcon from "../assets/cart.png";
+import logo from "../assets/logo.svg";
+import cartIcon from "../assets/cart.svg";
 import HorizontalNavigation from "./HorizontalNavigation";
 import { Link } from "react-router-dom";
 

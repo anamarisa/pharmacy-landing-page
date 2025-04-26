@@ -36,7 +36,7 @@
 }
 
 .custom-gradient-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -45,13 +45,23 @@
 
   background: conic-gradient(
     from 110deg at 61.01% 66%,
-    #8BE199 0deg,
-    #A3E88B 15deg,
-    #E7FE74 60deg,
-    #FFE074 130deg,
-    #FFB05A 200deg,
-    #FF5A5A 270deg,
-    #D40505 330deg,
-    #8BE199 360deg
+    #8be199 0deg,
+    #a3e88b 15deg,
+    #e7fe74 60deg,
+    #ffe074 130deg,
+    #ffb05a 200deg,
+    #ff5a5a 270deg,
+    #d40505 330deg,
+    #8be199 360deg
   );
+}
+
+.filter-black {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.filter-violet {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(93%) saturate(687%)
+    hue-rotate(244deg) brightness(92%) contrast(98%);
 }

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import frame from "../assets/privacy-icons/frame.png";
-import money from "../assets/privacy-icons/money.png";
-import pill from "../assets/privacy-icons/pill.png";
-import check from "../assets/privacy-icons/check.png";
-import heart from "../assets/privacy-icons/heart.png";
-import elder from "../assets/privacy-icons/elder.png";
-import support from "../assets/privacy-icons/support.png";
-import insurance from "../assets/privacy-icons/insurance.gif";
-import coverage from "../assets/privacy-icons/coverage.jpeg";
+import frame from "../assets/privacy/frame.svg";
+import money from "../assets/privacy/money.svg";
+import pill from "../assets/privacy/pill.svg";
+import check from "../assets/privacy/check.svg";
+import heart from "../assets/privacy/heart.svg";
+import elder from "../assets/privacy/elder.png";
+import support from "../assets/privacy/support.png";
+import insurance from "../assets/privacy/insurance.gif";
+import coverage from "../assets/privacy/coverage.jpeg";
 
 export default function PrivacyAccordion() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const getImageForIndex = (index) => {
     switch (index) {
@@ -98,7 +98,11 @@ export default function PrivacyAccordion() {
                       <img
                         src={item.icon}
                         alt={item.alt}
-                        className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                        className={`w-6 h-6 sm:w-8 sm:h-8 object-contain transition-all duration-200 ${
+                          activeIndex === index
+                            ? "filter-violet"
+                            : "filter-black"
+                        }`}
                       />
                     </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import QuoteIcon from "../assets/quote.png";
+import QuoteIcon from "../assets/quote.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionHeader from "./SectionHeader";
@@ -70,7 +70,7 @@ export default function Testimonials() {
           <img
             src={QuoteIcon}
             alt="quote"
-            className="w-6 h-5 md:w-8 md:h-6 mb-4"
+            className="w-7 h-7 md:w-8 md:h-8 mb-4"
           />
           <p className="font-inter leading-relaxed">{text}</p>
         </div>
