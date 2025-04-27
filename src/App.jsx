@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { cards } from "./data/blogData";
 import ScrollToTop from "./components/ScrollToTop";
+import LoadingSpinner from "./components/LoadingSpinner";
 import "./index.css";
 
 const LandingPage = lazy(() => import("./components/LandingPage"));
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/blog" element={<Blog />} />

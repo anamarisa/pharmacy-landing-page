@@ -65,3 +65,10 @@
   filter: brightness(0) saturate(100%) invert(29%) sepia(93%) saturate(687%)
     hue-rotate(244deg) brightness(92%) contrast(98%);
 }
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
