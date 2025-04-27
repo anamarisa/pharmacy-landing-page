@@ -75,9 +75,9 @@ export const virusData = {
         treatmentSummary: "HIV isn't curable, but ART can make viral levels undetectable, preventing sexual transmission (U=U). Early treatment and daily adherence support a healthy immune system and prevent complications."
     },
 
-    gonorrhea: {
-        id: "gonorrhea",
-        name: "Gonorrhea",
+    gonorhea: {
+        id: "gonorhea",
+        name: "Gonorhea",
         symptoms: [
             {
                 stage: "Early Stage",
