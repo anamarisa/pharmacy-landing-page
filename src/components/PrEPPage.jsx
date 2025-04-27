@@ -1,22 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// import { categoryDetails } from "../../src/data/categoryDetails";
 import { virusData } from "../../src/data/virusData";
 import Header from "../components/Header";
 import Footer from "./Footer";
 
-import prepIcon from "../assets/icons/prep-icon.png";
-import nrtisIcon from "../assets/icons/nrtis.png";
-import nnrtisIcon from "../assets/icons/nnrtis.png";
-import pisIcon from "../assets/icons/pis.png";
-import instisIcon from "../assets/icons/instis.png";
+import prepIcon from "../assets/icons/prep-icon.svg";
 import bgPrep from "../assets/images/bg-images/bg-prep.png";
 import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
   const { categoryName } = useParams();
 
-  // Normalize the category name by replacing spaces with hyphens and converting to lowercase
   const normalizedCategoryName = categoryName
     .toLowerCase()
     .replace(/\s+/g, "-");
@@ -30,32 +24,25 @@ export default function PrepPage() {
     return <p className="text-center mt-10">Category not found.</p>;
   }
 
-  // Destructure the properties from detail
   const { symptoms, medications, sideEffects, medicationSummary } = detail;
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Header */}
       <Header />
 
       {/* Hero Section */}
       <section className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[400px]">
-        {/* Background Image */}
         <img src={bgPrep} alt="PrEP" className="w-full h-full object-cover" />
 
-        {/* Overlay transparan */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Content */}
         <div className="absolute inset-0 grid grid-cols-2">
-          {/* PrEP */}
           <div className="flex items-center justify-center border-r border-white/30">
             <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
               {detail.name}
             </h2>
           </div>
 
-          {/* PEP */}
           <div className="flex items-center justify-center">
             <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
               PEP
@@ -107,36 +94,16 @@ export default function PrepPage() {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* medication cards */}
             <div className="lg:col-span-2 flex flex-col divide-y divide-gray-200">
-              <div className="py-3 md:py-4">
-                <MedicationCard
-                  iconSrc={nrtisIcon}
-                  name="NRTIs"
-                  description="These drugs block HIV from copying its genetic material, preventing the virus from multiplying. Common NRTIs include Tenofovir and Emtricitabine."
-                />
-              </div>
-              <div className="py-3 md:py-4">
-                <MedicationCard
-                  iconSrc={nnrtisIcon}
-                  name="NNRTIs"
-                  description="NNRTIs stop HIV from replicating by binding directly to the virus's reverse transcriptase enzyme. Examples include Efavirenz and Rilpivirine."
-                />
-              </div>
-              <div className="py-3 md:py-4">
-                <MedicationCard
-                  iconSrc={pisIcon}
-                  name="Protease Inhibitors (PIs)"
-                  description="These medications prevent HIV from maturing by blocking protease. Common PIs are Darunavir and Atazanavir."
-                />
-              </div>
-              <div className="py-3 md:py-4">
-                <MedicationCard
-                  iconSrc={instisIcon}
-                  name="Integrase Inhibitors (INSTIs)"
-                  description="This class stops HIV from integrating its genetic material into DNA, preventing infection spread. Examples are Dolutegravir and Raltegravir."
-                />
-              </div>
+              {medications.map((medication) => (
+                <div key={medication.name} className="py-3 md:py-4">
+                  <MedicationCard
+                    iconSrc={medication.iconSrc}
+                    name={medication.name}
+                    description={medication.description}
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Right side: info panel */}

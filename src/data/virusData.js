@@ -1,4 +1,8 @@
-// src/data/virusData.js
+import nrtisIcon from "../assets/icons/nrtis.svg";
+import nnrtisIcon from "../assets/icons/nnrtis.svg";
+import pisIcon from "../assets/icons/pis.svg";
+import instisIcon from "../assets/icons/instis.svg";
+
 export const virusData = {
     hiv: {
         id: "hiv",
@@ -19,22 +23,22 @@ export const virusData = {
         ],
         medications: [
             {
-                iconSrc: "nrtis",
+                iconSrc: nrtisIcon,
                 name: "NRTIs",
                 description: "These drugs block HIV from copying its genetic material, preventing the virus from multiplying. Common NRTIs include Tenofovir and Emtricitabine."
             },
             {
-                iconSrc: "nnrtis",
+                iconSrc: nnrtisIcon,
                 name: "NNRTIs",
                 description: "NNRTIs stop HIV from replicating by binding directly to the virus's reverse transcriptase enzyme. Examples include Efavirenz and Rilpivirine."
             },
             {
-                iconSrc: "pis",
+                iconSrc: pisIcon,
                 name: "Protease Inhibitors (PIs)",
                 description: "These medications prevent HIV from maturing by blocking protease. Common PIs are Darunavir and Atazanavir."
             },
             {
-                iconSrc: "instis",
+                iconSrc: instisIcon,
                 name: "Integrase Inhibitors (INSTIs)",
                 description: "This class stops HIV from integrating its genetic material into DNA, preventing infection spread. Examples are Dolutegravir and Raltegravir."
             }
@@ -42,23 +46,27 @@ export const virusData = {
         sideEffects: [
             {
                 title: "Gastrointestinal Issues",
-                description: "Nausea (30%), vomiting (15%), and diarrhea (20%) are common when starting ART. Usually improves within 4-6 weeks."
+                description: "Nausea, vomiting, and diarrhea are common, especially when starting a new treatment regimen. These can be temporary as the body adjusts to the medications."
             },
             {
-                title: "Neuropsychiatric Effects",
-                description: "EFV causes dizziness (28%), insomnia (16%), and abnormal dreams (25%) in first month. Usually resolves by week 4."
+                title: "Headaches and Dizziness",
+                description: "Some people experience headaches or dizziness, particularly when beginning ART. These side effects tend to lessen as the body becomes accustomed to the treatment."
             },
             {
-                title: "Lipodystrophy",
-                description: "Long-term PIs may cause fat redistribution (10-20% of patients). Newer INSTIs have lower risk."
+                title: "Fatigue",
+                description: "Feeling tired or low energy is a common effect, particularly in the early stages of treatment. It’s important to rest and stay hydrated to help manage this."
             },
             {
-                title: "Renal Impairment",
-                description: "TDF may decrease kidney function (8% risk). Monitor creatinine clearance quarterly."
+                title: "Insomnia",
+                description: "Difficulty falling or staying asleep may occur, especially during the initial phase of treatment. Establishing a relaxing bedtime routine can help improve sleep quality."
             },
             {
-                title: "Bone Density Loss",
-                description: "ART initiation causes 2-6% bone loss in first 2 years. Calcium/vitamin D recommended."
+                title: "Rash",
+                description: "Skin rash or irritation can develop as a side effect of certain medications. It is advisable to consult a healthcare provider if a rash persists or becomes severe."
+            },
+            {
+                title: "Mood Changes",
+                description: "Changes in mood, such as mood swings or increased anxiety, might be experienced while undergoing treatment. Engaging in stress-relieving activities can help alleviate these symptoms."
             }
         ],
         sideEffectsSummary: "HIV medications may cause temporary nausea, fatigue, and sleep disturbances when starting treatment. Most side effects improve within weeks. Regular blood tests monitor for long-term kidney, liver, and bone health.",
