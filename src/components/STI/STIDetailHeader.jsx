@@ -8,7 +8,7 @@ export default function STIDetailHeader({ selected }) {
         F* PrEP
       </h4>
       <Link
-        to={`/sti-awareness/${encodeURIComponent(selected)}`}
+        to={`/sti-awareness/${selected.toLowerCase()}`}
         className="text-violet font-semibold border border-violet hover:bg-violet hover:text-white px-4 sm:px-[18px] py-1.5 sm:py-[6px] rounded-lg text-sm sm:text-base leading-normal transition-colors"
       >
         See More

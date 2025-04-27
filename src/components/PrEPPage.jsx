@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { categoryDetails } from "../../src/data/categoryDetails";
+// import { categoryDetails } from "../../src/data/categoryDetails";
+import { virusData } from "../../src/data/virusData";
 import Header from "../components/Header";
 import Footer from "./Footer";
 
@@ -14,29 +15,23 @@ import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
   const { categoryName } = useParams();
-  const detail = categoryDetails[categoryName];
+
+  // Normalize the category name by replacing spaces with hyphens and converting to lowercase
+  const normalizedCategoryName = categoryName
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+
+  // Find the virus data by matching the normalized name
+  const detail = Object.values(virusData).find(
+    (virus) => virus.id === normalizedCategoryName
+  );
 
   if (!detail) {
     return <p className="text-center mt-10">Category not found.</p>;
   }
 
-  const symptoms = [
-    {
-      stage: "Acute Stage",
-      description:
-        "Fever, chills, swollen lymph nodes, rash, sore throat, muscle aches, and fatigue.",
-    },
-    {
-      stage: "Chronic Stage",
-      description:
-        "Often asymptomatic, but may include persistent swelling of lymph nodes and mild infections.",
-    },
-    {
-      stage: "Advanced Stage (AIDS)",
-      description:
-        "Rapid weight loss, prolonged fever, night sweats, chronic diarrhea, recurring infections, and extreme fatigue.",
-    },
-  ];
+  // Destructure the properties from detail
+  const { symptoms, medications, sideEffects, medicationSummary } = detail;
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -56,7 +51,7 @@ export default function PrepPage() {
           {/* PrEP */}
           <div className="flex items-center justify-center border-r border-white/30">
             <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
-              PrEP
+              {detail.name}
             </h2>
           </div>
 
@@ -73,7 +68,6 @@ export default function PrepPage() {
       <main className="max-w-[1024px] mx-auto py-8 md:py-10 px-4 sm:px-6 lg:px-8">
         {/* SYMPTOMS */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-10">
-          {/* Left Content */}
           <div className="flex-1">
             <h3 className="text-sm font-semibold text-dark-violet uppercase mb-2">
               SYMPTOMS
@@ -82,11 +76,9 @@ export default function PrepPage() {
               Recognizing Signs <br className="hidden sm:block" />
               Symptoms To Look Out For
             </h3>
+            {/* RECOMMENDATION TEXT */}
             <p className="font-inter text-base md:text-lg font-light leading-relaxed text-neutral/950 max-w-[502px]">
-              If someone thinks they have fever cough etc, certain symptoms that
-              basically only in HIV positive patients, out of 10 symptoms I have
-              5, then we want to put text in red that says we highly recommend
-              that you visit an ER as soon as possible.
+              {detail.recommendation}
             </p>
           </div>
 
@@ -111,8 +103,7 @@ export default function PrepPage() {
             Controlling The Virus
           </h3>
           <p className="font-inter text-base md:text-lg font-light leading-relaxed text-neutral/950 max-w-3xl mb-6">
-            From preventative care to restorative dentistry, our team is
-            dedicated to providing the best possible dental care for you.
+            {medicationSummary}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -154,10 +145,7 @@ export default function PrepPage() {
                 Treatment
               </h4>
               <p className="font-inter text-base font-light leading-relaxed text-gray-700">
-                HIV isn't curable, but ART can make viral levels undetectable,
-                preventing sexual transmission (U=U). Early treatment and daily
-                adherence support a healthy immune system and prevent
-                complications.
+                {detail.treatmentSummary}
               </p>
               <a
                 href="#"
@@ -182,37 +170,18 @@ export default function PrepPage() {
           <h2 className="font-manrope font-bold text-2xl sm:text-3xl md:text-4xl leading-[1.2] tracking-tight mb-3 md:mb-4">
             What To Expect
           </h2>
-          <p className="font-inter text-base md:text-lg font-light leading-relaxed text-neutral/950 max-w-2xl mb-6 md:mb-8">
-            HIV medications may cause side effects like nausea and fatigue.{" "}
-            <br className="hidden md:block" />
-            Regular checkups help monitor long-term concerns.
+          <p className="max-w-2xl font-inter text-base md:text-lg font-light leading-relaxed text-neutral/950 mb-6 md:mb-8">
+            {detail.sideEffectsSummary}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <SideEffectCard
-              title="Gastrointestinal Issues"
-              description="Nausea, vomiting, and diarrhea are common, especially when starting a new treatment regimen. These can be temporary as the body adjusts to the medications."
-            />
-            <SideEffectCard
-              title="Headaches and Dizziness"
-              description="Some people experience headaches or dizziness, particularly when beginning ART. These side effects tend to lessen as the body becomes accustomed to the treatment."
-            />
-            <SideEffectCard
-              title="Fatigue"
-              description="Feeling tired or low energy is a common effect, particularly in the early stages of treatment. It's important to rest and stay hydrated to help manage this."
-            />
-            <SideEffectCard
-              title="Insomnia"
-              description="Difficulty falling or staying asleep may occur, especially during the initial phase of treatment. Establishing a relaxing bedtime routine can help improve sleep quality."
-            />
-            <SideEffectCard
-              title="Rash"
-              description="Skin rash or irritation can develop as a side effect of certain medications. It is advisable to consult a healthcare provider if a rash persists or becomes severe."
-            />
-            <SideEffectCard
-              title="Mood Changes"
-              description="Changes in mood, such as mood swings or increased anxiety, might be experienced while undergoing treatment. Engaging in stress-relieving activities can help alleviate these symptoms."
-            />
+            {sideEffects.map((item, idx) => (
+              <SideEffectCard
+                key={idx}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
           </div>
         </section>
       </main>
