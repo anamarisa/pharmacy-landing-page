@@ -14,7 +14,7 @@ const FeaturedBlogsSidebar = ({ blogs = [], currentSlug }) => {
             className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start gap-4 hover:bg-gray-50 p-2 rounded-lg transition-colors"
           >
             <Link
-              to={`/blog/${blog.slug}`}
+              to={`/blog/post/${blog.slug}`}
               className="block w-full sm:w-[160px] lg:w-full xl:w-[160px] flex-shrink-0"
             >
               <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-100">
