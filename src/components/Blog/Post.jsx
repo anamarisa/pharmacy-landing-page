@@ -1,10 +1,5 @@
 import Footer from "../Footer";
 import Header from "../Header";
-import heroImage from "../../assets/images/blog-images/hero.png";
-import detail1 from "../../assets/images/blog-images/detail1.png";
-import detail2 from "../../assets/images/blog-images/detail2.png";
-import detail3 from "../../assets/images/blog-images/detail3.png";
-import detail4 from "../../assets/images/blog-images/detail4.png";
 import { useParams } from "react-router-dom";
 import FeaturedBlogsSidebar from "./FeaturedBlogsSidebar";
 
@@ -17,7 +12,7 @@ const BlogPost = ({ cards = [] }) => {
       slug: "understanding-viruses-the-invisible-world-within-us",
       title: "Understanding Viruses: The Invisible World Within Us",
       publishedAt: "February 15, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -51,39 +46,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "The immune system works tirelessly to detect and eliminate viruses, but viruses have developed sophisticated strategies to evade these defenses. This ongoing struggle shapes the outcomes of infections and influences the development of treatments.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "The Science of Immunity",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "How Vaccines Save Millions",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Mutation: The Secret Weapon of Viruses",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "The Future of Virus Research",
-        },
-      ],
     },
     {
       id: 2,
       slug: "how-viruses-attack-the-human-body",
       title: "How Viruses Attack the Human Body",
       publishedAt: "February 10, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -135,39 +104,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "The ability of viruses to infiltrate and manipulate host cells makes them both fascinating and dangerous. Understanding how viruses attack the human body is key to developing effective treatments and preventive measures, such as vaccines, that can minimize their impact on human health.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "The Science of Immunity",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "How Vaccines Save Millions",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Mutation: The Secret Weapon of Viruses",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "The Future of Virus Research",
-        },
-      ],
     },
     {
       id: 3,
       slug: "the-immune-systems-defense-against-viruses",
       title: "The Immune System's Defense Against Viruses",
       publishedAt: "February 5, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -201,39 +144,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "Vaccines are a powerful tool in strengthening the immune system’s ability to fight off viruses. By introducing a harmless part of the virus or a weakened form of the virus into the body, vaccines stimulate the adaptive immune system to produce antibodies without causing illness. This allows the body to recognize the virus and respond more effectively if it encounters the real virus in the future. Vaccines have been instrumental in eradicating or controlling many viral diseases, such as smallpox and polio, and continue to play a critical role in preventing viral outbreaks globally.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "Understanding the Structure of Viruses",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "How Vaccines Save Millions",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "The Science Behind Viral Mutations",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "New Frontiers in Virus Research",
-        },
-      ],
     },
     {
       id: 4,
       slug: "preventing-viral-infections-best-practices",
       title: "Preventing Viral Infections: Best Practices",
       publishedAt: "February 1, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -258,39 +175,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "In addition to hand hygiene and vaccination, maintaining a healthy lifestyle plays a crucial role in preventing viral infections. A well-balanced diet rich in fruits, vegetables, and whole grains provides the necessary nutrients to keep the immune system strong. Regular physical activity also boosts immunity by improving circulation and helping the body respond more effectively to infections. Furthermore, getting enough sleep is essential for immune function. Chronic sleep deprivation weakens the immune system and makes the body more susceptible to infections. Stress management is another important factor; chronic stress can suppress the immune response, leaving the body more vulnerable to viruses. Practices like meditation, yoga, or simply taking time to relax can help reduce stress and support overall health. Together, these lifestyle habits help build a strong immune system that can better defend against viral infections, making it easier to avoid becoming ill even when exposed to viruses.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "Understanding the Role of the Immune System in Virus Defense",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "How Airborne Viruses Spread and How to Protect Yourself",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "The Impact of Hygiene on Preventing Viral Diseases",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "The Future of Vaccination and Viral Disease Prevention",
-        },
-      ],
     },
     {
       id: 5,
       slug: "virus-mutability-the-challenge-of-new-strains",
       title: "Virus Mutability: The Challenge of New Strains",
       publishedAt: "January 25, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -324,40 +215,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "The ongoing mutability of viruses has pushed researchers to innovate new ways to combat viral diseases. One approach is the development of universal vaccines that target broader parts of the virus, making them effective against multiple strains. Scientists are also exploring mRNA technology, which has shown promise in creating more adaptable vaccines. This technology allows for quicker modifications to vaccines in response to emerging viral strains. Moreover, advancements in genomic sequencing have made it easier to track viral mutations in real-time, providing valuable data for the development of targeted therapies. While it’s clear that viral mutability will continue to challenge healthcare systems, ongoing research holds the potential to improve how we prevent, treat, and manage viral infections. This progress is essential in staying ahead of rapidly evolving viruses and reducing the impact of future outbreaks.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title:
-            "The Science of Immunity: How Our Bodies Defend Against Viruses",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "Why Mutation is the Key to Viral Evolution",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "What Makes a Virus Deadly: A Look at Viral Pathogenicity",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "The Role of Genome Sequencing in Tracking Viral Outbreaks",
-        },
-      ],
     },
     {
       id: 6,
       slug: "medications-and-treatments-for-viral-infections",
       title: "Medications and Treatments for Viral Infections",
       publishedAt: "January 20, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -391,39 +255,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "Nanotechnology is opening new doors in the fight against viral infections. Nanoparticles can be engineered to deliver antiviral drugs directly to infected cells, increasing treatment precision and reducing harmful side effects. Some nanoparticles are even designed to trap viruses, preventing them from infecting new cells. Research is also exploring the use of nanomaterials to enhance vaccine delivery, allowing vaccines to generate stronger and longer-lasting immune responses. Additionally, scientists are investigating 'smart' nanoparticles that release treatment only in response to certain biological triggers, ensuring maximum effect with minimal risk. Another promising area is the combination of nanotechnology with CRISPR gene-editing tools to selectively disrupt viral genomes inside the body. Though many of these technologies are still experimental, they represent a future where treatments can be highly targeted, personalized, and more effective than traditional approaches. Continued investment in nanotechnology may redefine how we manage both old and emerging viral threats in the coming decades.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "Next-Gen Antivirals: The Future of Medicine",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "Immune Engineering: Reprogramming Our Defenses",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Nanomedicine Explained: Tiny Solutions to Big Problems",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "Therapeutic Vaccines: Hope for Chronic Viral Infections",
-        },
-      ],
     },
     {
       id: 7,
       slug: "the-role-of-vaccines-in-virus-prevention",
       title: "The Role of Vaccines in Virus Prevention",
       publishedAt: "January 10, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -457,39 +295,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "The future of vaccines is incredibly promising, with scientists pushing the boundaries of what immunization can achieve. mRNA vaccine platforms have already revolutionized responses to emerging viruses, allowing faster development and easier adaptation to mutations. Research into 'universal vaccines' aims to create shots that protect against entire virus families, reducing the need for frequent updates. Needle-free delivery systems, such as nasal sprays and microneedle patches, are being developed to make vaccines easier to administer and less intimidating. Personalized vaccines, based on an individual's genetic profile, could one day tailor protection more effectively. Efforts are also underway to create vaccines that generate broader, longer-lasting immunity, cutting down the need for boosters. Innovations in storage and distribution, like heat-stable vaccines, may solve the logistical challenges faced in rural and developing regions. With the lessons learned from recent pandemics, the future points toward smarter, faster, and more accessible vaccination solutions that can shield humanity against the evolving landscape of viral diseases.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "The Journey of Immunity: How Vaccines Protect",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "Virus Evolution: Staying Ahead with Vaccines",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Overcoming Vaccine Hesitancy: Building Trust",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "Inside the Lab: How Vaccines Are Made",
-        },
-      ],
     },
     {
       id: 8,
       slug: "how-to-boost-your-immune-system-to-fight-viruses",
       title: "How to Boost Your Immune System to Fight Viruses",
       publishedAt: "January 15, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -523,39 +335,13 @@ const BlogPost = ({ cards = [] }) => {
           text: "Building a resilient immune system doesn't happen overnight. It's the result of small, daily decisions made consistently over time. By nourishing your body with the right foods, maintaining active movement, ensuring restful sleep, and protecting mental health, you create an environment where your immune system can thrive. Occasional setbacks happen — a night of poor sleep, a skipped workout — but the bigger picture matters most. Regular maintenance of your body's natural defenses means that when a virus strikes, your immune system is better equipped to respond swiftly and effectively. Health isn’t just a destination — it’s a lifelong practice of care.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "10 Superfoods That Boost Immunity",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "Mindfulness for Stronger Immunity",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Why Sleep is Your Secret Weapon Against Viruses",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "Exercise and Immunity: Finding the Sweet Spot",
-        },
-      ],
     },
     {
       id: 9,
       slug: "emerging-viruses-the-next-global-threat",
       title: "Emerging Viruses: The Next Global Threat",
       publishedAt: "January 5, 2025",
-      heroImage: heroImage,
+      heroImage: null,
       content: [
         {
           type: "paragraph",
@@ -589,36 +375,16 @@ const BlogPost = ({ cards = [] }) => {
           text: "Despite the challenges, innovation offers hope. Scientists are developing universal vaccines targeting virus families like coronaviruses and influenza. Advances in mRNA technology allow vaccines to be designed in weeks rather than years. Portable diagnostics can detect infections within hours, even in remote areas. Artificial intelligence can model viral mutations, helping researchers stay one step ahead. Global health organizations are forming stronger partnerships with tech companies, governments, and local communities to prepare more effectively. While emerging viruses will always pose a threat, our growing scientific toolkit, combined with international collaboration and public awareness, gives humanity a better chance than ever to confront — and defeat — the next global viral challenge.",
         },
       ],
-      featuredBlogs: [
-        {
-          id: 1,
-          image: detail1,
-          date: "January 10, 2025",
-          title: "The Science Behind Zoonotic Spillovers",
-        },
-        {
-          id: 2,
-          image: detail2,
-          date: "January 10, 2025",
-          title: "Predicting the Next Pandemic: Tools and Techniques",
-        },
-        {
-          id: 3,
-          image: detail3,
-          date: "January 10, 2025",
-          title: "Why Climate Change is Fueling Viral Threats",
-        },
-        {
-          id: 4,
-          image: detail4,
-          date: "January 10, 2025",
-          title: "Inside the Race to Create Universal Vaccines",
-        },
-      ],
     },
   ];
 
   const post = posts.find((post) => post.slug === slug);
+
+  const matchingCard = cards.find((card) => card.slug === slug);
+
+  if (post && matchingCard) {
+    post.heroImage = matchingCard.image;
+  }
 
   // Get random featured blogs (excluding current post)
   const getRandomFeaturedBlogs = () => {
