@@ -106,7 +106,7 @@ export default function Header() {
             <img
               src={menu}
               alt="Menu"
-              className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] object-contain"
+              className="w-[24px] h-[24px] md:w-[32px] md:h-[32px] object-contain"
             />
           </button>
         </div>
