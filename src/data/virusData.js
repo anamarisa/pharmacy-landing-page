@@ -3,6 +3,17 @@ import nnrtisIcon from "../assets/icons/nnrtis.svg";
 import pisIcon from "../assets/icons/pis.svg";
 import instisIcon from "../assets/icons/instis.svg";
 
+import hiv from "../animations/hiv.json";
+import gonorhea from "../animations/gonorhea.json";
+import chlamydia from "../animations/chlamydia.json";
+import trichomoniasis from "../animations/trichomonas.json";
+import syphilis from "../animations/syphilis.json";
+import hpv from "../animations/genital.json";
+import hepatitis from "../animations/herpes.json";
+import genital from "../animations/hpv.json";
+import ureaplasma from "../animations/ureaplasma.json";
+import mycoplasma from "../animations/mycoplasma.json";
+
 export const virusData = {
     hiv: {
         id: "hiv",
@@ -69,6 +80,7 @@ export const virusData = {
                 description: "Changes in mood, such as mood swings or increased anxiety, might be experienced while undergoing treatment. Engaging in stress-relieving activities can help alleviate these symptoms."
             }
         ],
+        virusIcon: hiv,
         sideEffectsSummary: "HIV medications may cause temporary nausea, fatigue, and sleep disturbances when starting treatment. Most side effects improve within weeks. Regular blood tests monitor for long-term kidney, liver, and bone health.",
         medicationSummary: "Modern ART combines 3 drugs from 2 classes (typically INSTI + NRTI backbone). Achieves undetectable viral load in 90% by 24 weeks. Lifelong treatment required but allows near-normal life expectancy when adherent.",
         recommendation: "Start ART immediately after diagnosis regardless of CD4 count. Take medications at same time daily. Report severe rash, abdominal pain, or yellow eyes immediately. U=U - undetectable means untransmittable.",
@@ -135,6 +147,7 @@ export const virusData = {
                 description: "Doxycycline causes severe sunburn reactions in 20% of users. Requires SPF 30+ sunscreen."
             }
         ],
+        virusIcon: gonorhea,
         sideEffectsSummary: "Gonorrhea treatments are generally well-tolerated but may cause GI upset or injection site reactions. Serious allergic reactions are rare but require immediate attention.",
         medicationSummary: "Gonorrhea requires dual therapy (ceftriaxone 500mg IM + azithromycin 1g PO) due to emerging resistance. Complete all prescribed doses even if symptoms improve to prevent resistance. Retesting in 3 months is crucial.",
         recommendation: "Seek immediate treatment if you experience painful urination or unusual discharge. Notify all sexual partners from the past 60 days. Abstain from sex until 7 days after completing antibiotics.",
@@ -188,12 +201,12 @@ export const virusData = {
                 description: "Azithromycin causes mild-moderate headaches in 10-15% of patients."
             }
         ],
+        virusIcon: chlamydia,
         sideEffectsSummary: "Chlamydia antibiotics can cause mild stomach upset or sun sensitivity. These effects are usually temporary and can be managed with simple measures.",
         medicationSummary: "First-line treatments are azithromycin 1g single dose (85-95% effective) or doxycycline 100mg twice daily for 7 days (95-98% effective). Rectal infections respond better to doxycycline.",
         recommendation: "All sexual partners from the past 60 days must be treated. Women should schedule a test-of-cure 3-4 weeks post-treatment if symptoms persist. Annual screening advised for under 25.",
         treatmentSummary: "Chlamydia is completely curable with antibiotics. Single-dose azithromycin or week-long doxycycline are highly effective. Early treatment prevents complications."
     },
-
     trichomoniasis: {
         id: "trichomoniasis",
         name: "Trichomoniasis",
@@ -237,6 +250,7 @@ export const virusData = {
                 description: "Harmless side effect caused by metronidazole metabolites. Lasts 24-48 hours."
             }
         ],
+        virusIcon: trichomoniasis,
         sideEffectsSummary: "Antiparasitic treatments may cause metallic taste or GI discomfort. Avoiding alcohol during treatment prevents severe reactions.",
         medicationSummary: "Metronidazole 2g single dose (cure rate 90-95%) or tinidazole 2g single dose (98% cure rate) disrupt parasite DNA. Tinidazole has better tissue penetration.",
         recommendation: "Both partners must be treated simultaneously even if asymptomatic. Avoid sexual contact until both complete treatment. Retest at 3 months.",
@@ -290,6 +304,7 @@ export const virusData = {
                 description: "Occurs in 30% of patients taking doxycycline for late syphilis."
             }
         ],
+        virusIcon: syphilis,
         sideEffectsSummary: "Penicillin injections may cause temporary soreness. Some patients experience flu-like symptoms as bacteria die during treatment.",
         medicationSummary: "Benzathine penicillin G remains 95% effective for early syphilis. It maintains treponemicidal levels for 3 weeks. Doxycycline is second-line for penicillin-allergic patients.",
         recommendation: "All sexual partners from the past 90 days need evaluation. Repeat RPR titers at 6, 12, and 24 months. HIV testing is mandatory.",
@@ -343,6 +358,7 @@ export const virusData = {
                 description: "Nausea occurs in 15% of acyclovir users, usually mild."
             }
         ],
+        virusIcon: hpv,
         sideEffectsSummary: "Herpes antivirals are generally well-tolerated, with headaches being most common. Staying hydrated helps minimize potential kidney strain.",
         medicationSummary: "Valacyclovir offers 70-80% reduction in outbreaks. It converts to acyclovir with 3-5x greater bioavailability. Start therapy within 72 hours of prodrome.",
         recommendation: "Daily suppression reduces transmission risk by 48%. Use condoms and avoid sex during outbreaks. Inform obstetric providers if pregnant.",
@@ -397,6 +413,7 @@ export const virusData = {
                 description: "Occurs in 30% of patients, requiring antidepressant therapy in 15%."
             }
         ],
+        virusIcon: hepatitis,
         sideEffectsSummary: "HBV antivirals may affect kidney function with long-term use. Interferon treatment can cause more significant side effects requiring monitoring.",
         medicationSummary: "First-line oral antivirals suppress viral load in 80% after 5 years. Peginterferon offers finite course with 5-10% chance of functional cure.",
         recommendation: "Household/sexual contacts need testing. Vaccinate all susceptible individuals. Avoid alcohol. Monitor LFTs and viral load every 6 months.",
@@ -451,6 +468,7 @@ export const virusData = {
                 description: "Hypopigmentation (15%) or hyperpigmentation (10%) may persist for months."
             }
         ],
+        virusIcon: genital,
         sideEffectsSummary: "Wart treatments may cause skin irritation or temporary discomfort. These local reactions typically resolve as treatment progresses.",
         medicationSummary: "Patient-applied therapies have 35-50% clearance rates. Cryotherapy has 60-80% initial clearance but 20-30% recurrence. Combination approaches often needed.",
         recommendation: "Sexual partners should be examined but treatment isn't required unless warts present. Women need routine cervical cancer screening.",
@@ -509,6 +527,7 @@ export const virusData = {
                 description: "All antibiotics may cause C. difficile infection (1-2% risk)."
             }
         ],
+        virusIcon: ureaplasma,
         sideEffectsSummary: "Ureaplasma antibiotics can cause sun sensitivity or digestive issues. More serious side effects like heart rhythm changes are rare but important.",
         medicationSummary: "Doxycycline (50-60% efficacy) is first-line. Azithromycin (60-70% efficacy) is alternative. Moxifloxacin (75-85% efficacy) is reserved for resistant cases.",
         recommendation: "Treatment only for symptomatic patients or prior to procedures. Partners should be treated if symptomatic. Report treatment failures for resistance testing.",
@@ -558,6 +577,8 @@ export const virusData = {
                 description: "Doxycycline causes nausea (25%), vomiting (10%), and esophagitis."
             }
         ],
+        virusIcon: mycoplasma,
+        bgGradient: "bg-gradient-to-br from-[#DC2626] to-[#6D0909]",
         sideEffectsSummary: "Mycoplasma treatments may cause GI upset. Fluoroquinolones carry small risk of tendon issues and should be used with caution.",
         medicationSummary: "Dual therapy achieves 85-90% cure. Moxifloxacin is second-line (90-95% cure). Resistance to macrolides exceeds 50% in some regions.",
         recommendation: "Screen for M. genitalium in persistent urethritis/cervicitis. Treat all partners concurrently. Return for test-of-cure 3-4 weeks post-treatment.",

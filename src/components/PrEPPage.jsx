@@ -1,4 +1,5 @@
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 import { useParams } from "react-router-dom";
 import { virusData } from "../../src/data/virusData";
 import Header from "../components/Header";
@@ -6,7 +7,6 @@ import Footer from "./Footer";
 
 import prepIcon from "../assets/icons/prep-icon.svg";
 import bgPrep from "../assets/images/bg-images/bg-prep.png";
-import hivAnimation from "../assets/images/hiv-animation.gif";
 
 export default function PrepPage() {
   const { categoryName } = useParams();
@@ -36,18 +36,10 @@ export default function PrepPage() {
 
         <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="absolute inset-0 grid grid-cols-2">
-          <div className="flex items-center justify-center border-r border-white/30">
-            <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
-              {detail.name}
-            </h2>
-          </div>
-
-          {/* <div className="flex items-center justify-center">
-            <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
-              PEP
-            </h2>
-          </div> */}
+        <div className="flex items-center justify-center absolute inset-0">
+          <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
+            {detail.name}
+          </h2>
         </div>
       </section>
 
@@ -120,11 +112,19 @@ export default function PrepPage() {
               >
                 Start Now
               </a>
-              <img
-                src={hivAnimation}
-                alt=""
-                className="w-[180px] md:w-[200px] mx-auto mt-4 object-cover"
-              />
+              <div
+                className={`${detail.bgGradient} mt-4 rounded-lg flex items-center justify-center`}
+              >
+                <Player
+                  autoplay
+                  loop
+                  src={detail.virusIcon}
+                  style={{
+                    width: "190px",
+                    height: "190px",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -168,7 +168,7 @@ export default function STIAwareness() {
         {/* See More button */}
         {!isActive && (
           <div className="flex justify-end p-4 sm:p-6">
-            <span className="text-[16px] leading-0.5 font-inter tracking-[-0.02em] font-medium text-neutral">
+            <span className="text-[16px] leading-[24px] font-inter tracking-[-0.02em] font-medium text-neutral">
               See More
             </span>
           </div>
