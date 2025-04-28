@@ -55,7 +55,7 @@ export default function STIAwareness() {
     },
     Syphilis: {
       bgGradient: "bg-gradient-to-br from-[#2563EB] to-[#3B82F6]",
-      size: { width: "140px", height: "140px" },
+      size: { width: "120px", height: "120px" },
     },
     Herpes: {
       bgGradient: "bg-gradient-to-br from-[#7C3AED] to-[#5B21B6]",
@@ -63,7 +63,7 @@ export default function STIAwareness() {
     },
     "Hepatitis B": {
       bgGradient: "bg-gradient-to-br from-[#422006] to-[#7F3E0C]",
-      size: { width: "280px", height: "280px" },
+      size: { width: "200px", height: "200px" },
     },
     "Genital Warts": {
       bgGradient: "bg-gradient-to-br from-[#1A2E05] to-[#4D7C0F]",

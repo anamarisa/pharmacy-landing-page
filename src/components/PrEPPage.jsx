@@ -43,11 +43,11 @@ export default function PrepPage() {
             </h2>
           </div>
 
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight drop-shadow-lg">
               PEP
             </h2>
-          </div>
+          </div> */}
         </div>
       </section>
 

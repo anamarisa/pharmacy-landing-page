@@ -1,14 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function HorizontalNavigation({ items, className = "" }) {
+export default function HorizontalNavigation({
+  items,
+  className = "",
+  itemClassName = "",
+  mobileMode = false
+}) {
   return (
-    <nav className={`flex items-center gap-6 ${className}`}>
+    <nav className={`${mobileMode ? '' : 'flex items-center gap-6'} ${className}`}>
       {items.map((item, index) => (
         <Link
           key={index}
           to={item.href}
-          className="font-medium cursor-pointer text-white text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] transition whitespace-nowrap"
+          className={`
+            font-medium cursor-pointer transition whitespace-nowrap
+            ${mobileMode ? 
+              `text-black text-xl font-medium w-full text-center py-2 hover:text-dark-violet ${itemClassName}` : 
+              `text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] ${itemClassName}`
+            }
+          `}
         >
           {item.label}
         </Link>

@@ -80,7 +80,7 @@ export default function HeroSection({ scrollToComparison }) {
   const column2 = [frame5, frame6, frame7, frame8];
 
   return (
-    <section className="w-full min-h-[calc(100vh-72px)] bg-white text-black px-4 lg:px-[64px] flex flex-col lg:flex-row justify-between items-center lg:max-w-[1440px] mx-auto text-center lg:text-left relative">
+    <section className="w-full lg:min-h-[calc(100vh-72px)] bg-white text-black px-4 lg:px-[64px] flex flex-col lg:flex-row justify-between items-center lg:max-w-[1440px] mx-auto text-center lg:text-left relative">
       {/* Left Side Content */}
       <div className="w-full max-w-[500px] lg:max-w-none mx-auto lg:mx-0 lg:text-left flex flex-col justify-center lg:justify-center items-center lg:items-start py-8 lg:py-0">
         {/* Badge */}
