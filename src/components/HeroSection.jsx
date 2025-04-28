@@ -56,8 +56,8 @@ export default function HeroSection({ scrollToComparison }) {
     dots: false,
     pauseOnHover: false,
     cssEase: "linear",
-    centerMode: true, // Added for better mobile centering
-    centerPadding: "0px", // Ensures no extra padding
+    centerMode: true,
+    centerPadding: "0px",
   };
 
   const imageSliderSettingsReversed = {
@@ -80,12 +80,12 @@ export default function HeroSection({ scrollToComparison }) {
   const column2 = [frame5, frame6, frame7, frame8];
 
   return (
-    <section className="w-full bg-white text-black px-4 sm:px-6 lg:px-[64px] flex flex-col lg:flex-row justify-between gap-6 items-center lg:max-w-[1440px] mx-auto mb-20 text-center lg:text-left relative">
+    <section className="w-full min-h-[calc(100vh-72px)] bg-white text-black px-4 lg:px-[64px] flex flex-col lg:flex-row justify-between items-center lg:max-w-[1440px] mx-auto text-center lg:text-left relative">
       {/* Left Side Content */}
-      <div className="w-full max-w-[500px] lg:max-w-none mx-auto lg:mx-0 lg:text-left flex flex-col items-center lg:items-start">
+      <div className="w-full max-w-[500px] lg:max-w-none mx-auto lg:mx-0 lg:text-left flex flex-col justify-center lg:justify-center items-center lg:items-start py-8 lg:py-0">
         {/* Badge */}
-        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4 mt-16">
-          <p className="font-inter font-normal text-[12px] sm:text-[16px] leading-[24px] tracking-[-0.02em] text-[#6A31CE]">
+        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4">
+          <p className="font-inter font-normal text-[12px] sm:text-[16px] leading-[24px] tracking-[-0.02em] sm:tracking-tighter text-[#6A31CE]">
             F HEALTH WORRIES, SAY HELLO TO GOOD HEALTH
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function HeroSection({ scrollToComparison }) {
 
         {/* Static Subtitle */}
         <p className="font-inter font-normal text-[12px] leading-[16px] tracking-[-0.02em] text-[#0A0A0A] opacity-30 mb-6 sm:mb-10 hidden sm:block">
-          99% of Patients Pay $0* For The Medication.*
+          98% of Patients Pay $0* For The Medication.*
         </p>
 
         {/* Buttons */}
@@ -141,8 +141,8 @@ export default function HeroSection({ scrollToComparison }) {
         </div>
       </div>
 
-      {/* Dual Column Vertical Sliders */}
-      <div className="relative w-full max-w-[700px] h-[360px] sm:h-[578px] mt-8 lg:mt-0 overflow-hidden">
+      {/* Dual Column Vertical Sliders - Full Height */}
+      <div className="relative w-full max-w-[700px] h-[360px] sm:h-[calc(100vh-72px)] overflow-hidden">
         <div className="grid grid-cols-2 gap-1 sm:gap-4 w-full h-full mx-auto">
           {/* Column 1 */}
           <div className="w-full h-full">
@@ -179,7 +179,7 @@ export default function HeroSection({ scrollToComparison }) {
           </div>
         </div>
 
-        {/* Gradient Overlay - Fixed to be visible */}
+        {/* Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10" />
       </div>
     </section>
