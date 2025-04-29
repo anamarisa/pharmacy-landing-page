@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import Footer from "./Footer";
 
 import prepIcon from "../assets/icons/prep-icon.svg";
-import bgPrep from "../assets/images/bg-images/bg-prep.png";
+import bgPrep from "../assets/images/bg-images/bg-prep.webp";
 
 export default function PrepPage() {
   const { categoryName } = useParams();

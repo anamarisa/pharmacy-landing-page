@@ -1,7 +1,7 @@
 import React from "react";
-import image from "../assets/images/image.png";
-import image1 from "../assets/images/image1.png";
-import image2 from "../assets/images/image2.png";
+import image from "../assets/images/image.webp";
+import image1 from "../assets/images/image1.webp";
+import image2 from "../assets/images/image2.webp";
 import bgEmerald from "../assets/bg-emerald.gif";
 import SectionHeader from "./SectionHeader";
 

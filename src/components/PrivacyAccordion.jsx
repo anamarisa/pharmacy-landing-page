@@ -4,8 +4,8 @@ import money from "../assets/privacy/money.svg";
 import pill from "../assets/privacy/pill.svg";
 import check from "../assets/privacy/check.svg";
 import heart from "../assets/privacy/heart.svg";
-import elder from "../assets/privacy/elder.png";
-import support from "../assets/privacy/support.png";
+import elder from "../assets/privacy/elder.webp";
+import support from "../assets/privacy/support.webp";
 import insurance from "../assets/privacy/insurance.gif";
 import coverage from "../assets/privacy/coverage.jpeg";
 

@@ -4,14 +4,14 @@ import { useRef, useEffect } from "react";
 import Button from "./common/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import frame1 from "../assets/images/hero-images/frame1.jpg";
-import frame2 from "../assets/images/hero-images/frame2.jpg";
-import frame3 from "../assets/images/hero-images/frame3.jpg";
-import frame4 from "../assets/images/hero-images/frame4.jpg";
-import frame5 from "../assets/images/hero-images/frame5.jpg";
-import frame6 from "../assets/images/hero-images/frame6.jpg";
-import frame7 from "../assets/images/hero-images/frame7.jpg";
-import frame8 from "../assets/images/hero-images/frame8.jpg";
+import frame1 from "../assets/images/hero-images/frame1.webp";
+import frame2 from "../assets/images/hero-images/frame2.webp";
+import frame3 from "../assets/images/hero-images/frame3.webp";
+import frame4 from "../assets/images/hero-images/frame4.webp";
+import frame5 from "../assets/images/hero-images/frame5.webp";
+import frame6 from "../assets/images/hero-images/frame6.webp";
+import frame7 from "../assets/images/hero-images/frame7.webp";
+import frame8 from "../assets/images/hero-images/frame8.webp";
 
 export default function HeroSection({ scrollToComparison }) {
   const keywordSliderRef = useRef(null);
