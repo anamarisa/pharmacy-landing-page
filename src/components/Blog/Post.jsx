@@ -1,4 +1,4 @@
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import Header from "../Header";
 import { useParams } from "react-router-dom";
 import FeaturedBlogsSidebar from "./FeaturedBlogsSidebar";

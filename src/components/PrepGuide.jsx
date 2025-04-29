@@ -1,11 +1,11 @@
 import React from "react";
-import consultIcon from "../assets/icons/plus.svg";
-import prescribedIcon from "../assets/icons/pill.svg";
-import routineIcon from "../assets/icons/stickman.svg";
-import safeHabitsIcon from "../assets/icons/calendar.svg";
-import storeIcon from "../assets/icons/check.svg";
-import hospitalIcon from "../assets/icons/hospital.svg";
-import SectionHeader from "./SectionHeader";
+import consultIcon from "../assets/icons/prep/plus.svg";
+import prescribedIcon from "../assets/icons/prep/pill.svg";
+import routineIcon from "../assets/icons/prep/stickman.svg";
+import safeHabitsIcon from "../assets/icons/prep/calendar.svg";
+import storeIcon from "../assets/icons/prep/check.svg";
+import hospitalIcon from "../assets/icons/prep/hospital.svg";
+import SectionHeader from "./common/SectionHeader";
 
 export default function PrepGuide() {
   const stepIcons = [

@@ -1,8 +1,8 @@
 import React from "react";
-import washingtonTimes from "../assets/logo/washington.svg";
-import forbes from "../assets/logo/forbes.svg";
-import success from "../assets/logo/success.svg";
-import usaToday from "../assets/logo/usa.svg";
+import washingtonTimes from "../assets/images/media/washington.svg";
+import forbes from "../assets/images/media/forbes.svg";
+import success from "../assets/images/media/success.svg";
+import usaToday from "../assets/images/media/usa.svg";
 
 export default function MediaLogosSection() {
   const mediaLogos = [

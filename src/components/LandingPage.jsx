@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { Routes, Route } from "react-router-dom";
 import ComparisonTable from "./ComparisonTable";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Header from "./Header";
 import HeroesSection from "./HeroesSection";
 import HeroSection from "./HeroSection";

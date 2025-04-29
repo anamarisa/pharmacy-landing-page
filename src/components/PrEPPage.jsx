@@ -3,9 +3,9 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Link, useParams } from "react-router-dom";
 import { virusData } from "../../src/data/virusData";
 import Header from "../components/Header";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
-import prepIcon from "../assets/icons/prep-icon.svg";
+import prepIcon from "../assets/icons/virus/icon.svg";
 import bgPrep from "../assets/images/bg-images/bg-prep.webp";
 
 export default function PrepPage() {

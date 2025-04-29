@@ -3,8 +3,8 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { cards } from "./data/blogData";
-import ScrollToTop from "./components/ScrollToTop";
-import LoadingSpinner from "./components/LoadingSpinner";
+import ScrollToTop from "./components/common/ScrollToTop";
+import LoadingSpinner from "./components/common/LoadingSpinner";
 import "./index.css";
 
 const LandingPage = lazy(() => import("./components/LandingPage"));

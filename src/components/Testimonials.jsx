@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import QuoteIcon from "../assets/quote.svg";
+import QuoteIcon from "../assets/icons/quote.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "./common/SectionHeader";
 
 export default function Testimonials() {
   const testimonialsRow1 = [

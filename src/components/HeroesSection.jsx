@@ -1,9 +1,9 @@
 import React from "react";
-import image from "../assets/images/image.webp";
-import image1 from "../assets/images/image1.webp";
-import image2 from "../assets/images/image2.webp";
-import bgEmerald from "../assets/bg-emerald.gif";
-import SectionHeader from "./SectionHeader";
+import image from "../assets/images/hero-images/image.webp";
+import image1 from "../assets/images/hero-images/image1.webp";
+import image2 from "../assets/images/hero-images/image2.webp";
+import bgEmerald from "../assets/images/bg-images/bg-emerald.gif";
+import SectionHeader from "./common/SectionHeader";
 
 export default function HeroesSection() {
   return (
@@ -31,12 +31,12 @@ export default function HeroesSection() {
               </>
             }
             subtitle={
-              <div className="text-emerald-100">
+              <span className="text-emerald-100">
                 Thank you to healthcare workers, educators, and{" "}
                 <span className="block">
                   first responders for their dedication.
                 </span>
-              </div>
+              </span>
             }
           />
         </div>

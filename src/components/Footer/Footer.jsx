@@ -1,7 +1,6 @@
 import React from "react";
 import FooterNavigation from "./FooterNavigation";
-import FooterSimpleLinks from "./FooterSimpleLinks"; // 👈 New component
-import Navigation from "./Navigation";
+import FooterSimpleLinks from "./FooterSimpleLinks";
 
 export default function Footer() {
   const footerLinks = [

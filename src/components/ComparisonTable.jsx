@@ -1,14 +1,14 @@
 import React from "react";
 import Button from "./common/Button";
-import FSTILogo from "../assets/F_STI.svg";
-import cancel from "../assets/cancel.svg";
-import done from "../assets/done.svg";
-import Icon1 from "../assets/table-icons/icon1.svg";
-import Icon2 from "../assets/table-icons/icon2.svg";
-import Icon3 from "../assets/table-icons/icon3.svg";
-import Icon4 from "../assets/table-icons/icon4.svg";
-import Icon5 from "../assets/table-icons/icon5.svg";
-import Icon6 from "../assets/table-icons/icon6.svg";
+import FSTILogo from "../assets/icons/table/F_STI.svg";
+import cancel from "../assets/icons/table/cancel.svg";
+import done from "../assets/icons/table/done.svg";
+import Icon1 from "../assets/icons/table/icon1.svg";
+import Icon2 from "../assets/icons/table/icon2.svg";
+import Icon3 from "../assets/icons/table/icon3.svg";
+import Icon4 from "../assets/icons/table/icon4.svg";
+import Icon5 from "../assets/icons/table/icon5.svg";
+import Icon6 from "../assets/icons/table/icon6.svg";
 
 const features = [
   {

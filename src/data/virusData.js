@@ -1,7 +1,7 @@
-import nrtisIcon from "../assets/icons/nrtis.svg";
-import nnrtisIcon from "../assets/icons/nnrtis.svg";
-import pisIcon from "../assets/icons/pis.svg";
-import instisIcon from "../assets/icons/instis.svg";
+import nrtisIcon from "../assets/icons/virus/nrtis.svg";
+import nnrtisIcon from "../assets/icons/virus/nnrtis.svg";
+import pisIcon from "../assets/icons/virus/pis.svg";
+import instisIcon from "../assets/icons/virus/instis.svg";
 
 import hiv from "../animations/hiv.json";
 import gonorhea from "../animations/gonorhea.json";

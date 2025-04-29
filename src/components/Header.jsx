@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.svg";
-import menu from "../assets/menu.svg";
-import cartIcon from "../assets/cart.svg";
+import logo from "../assets/icons/header/logo.svg";
+import menu from "../assets/icons/header/menu.svg";
+import cartIcon from "../assets/icons/header/cart.svg";
 import HorizontalNavigation from "./HorizontalNavigation";
 import { Link } from "react-router-dom";
 

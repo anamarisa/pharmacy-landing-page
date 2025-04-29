@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import Header from "../Header";
-import SectionHeader from "../SectionHeader";
+import SectionHeader from "../common/SectionHeader";
 import Card from "./Card";
 import { cards } from "../../data/blogData";
 

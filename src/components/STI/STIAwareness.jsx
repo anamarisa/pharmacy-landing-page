@@ -4,7 +4,7 @@ import { categoryDetails, categories } from "../../data/categoryDetails";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SectionHeader from "../SectionHeader";
+import SectionHeader from "../common/SectionHeader";
 
 import { Player } from "@lottiefiles/react-lottie-player";
 import hivAnimation from "../../animations/hiv.json";
@@ -114,14 +114,24 @@ export default function STIAwareness() {
   };
 
   // Common card component with consistent 1:1 ratio
-  const STICard = ({ category, isActive, onClick, onMouseEnter, onMouseLeave }) => {
+  const STICard = ({
+    category,
+    isActive,
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+  }) => {
     const animationStyle = animationStyles[category.name];
-    
+
     return (
       <div
         className={`
           relative aspect-square rounded-xl flex flex-col justify-between cursor-pointer transition-all duration-200 overflow-hidden
-          ${isActive && animationStyle?.bgGradient ? animationStyle.bgGradient + " text-white" : "bg-[#f3f4f7]"}
+          ${
+            isActive && animationStyle?.bgGradient
+              ? animationStyle.bgGradient + " text-white"
+              : "bg-[#f3f4f7]"
+          }
         `}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
@@ -129,9 +139,11 @@ export default function STIAwareness() {
       >
         {/* Card Header */}
         <div className="flex justify-between items-start p-4 sm:p-5">
-          <h4 className={`text-[16px] md:text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
-            isActive ? "text-white" : "text-gray-800"
-          }`}>
+          <h4
+            className={`text-[16px] md:text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] capitalize ${
+              isActive ? "text-white" : "text-gray-800"
+            }`}
+          >
             {category.name}
           </h4>
         </div>
@@ -223,7 +235,8 @@ export default function STIAwareness() {
       <div className="md:hidden">
         <Slider {...sliderSettings} className="mb-12">
           {categories.map((category) => {
-            const isActive = hovered === category.name || selected === category.name;
+            const isActive =
+              hovered === category.name || selected === category.name;
             return (
               <div key={category.name} className="px-2 h-full">
                 <STICard
@@ -242,7 +255,8 @@ export default function STIAwareness() {
       {/* Desktop Grid */}
       <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
         {categories.map((category) => {
-          const isActive = hovered === category.name || selected === category.name;
+          const isActive =
+            hovered === category.name || selected === category.name;
           return (
             <STICard
               key={category.name}
@@ -258,8 +272,15 @@ export default function STIAwareness() {
 
       {/* Detail Card */}
       {selected && (
-        <div className={`transition-opacity duration-300 ease-out mt-6 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
-          <STIDetailCard selected={selected} categoryDetails={categoryDetails} />
+        <div
+          className={`transition-opacity duration-300 ease-out mt-6 ${
+            fadeIn ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <STIDetailCard
+            selected={selected}
+            categoryDetails={categoryDetails}
+          />
         </div>
       )}
     </section>
