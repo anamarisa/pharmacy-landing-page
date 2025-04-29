@@ -16,7 +16,7 @@ export default function HorizontalNavigation({
           className={`
             font-medium cursor-pointer transition whitespace-nowrap
             ${mobileMode ? 
-              `text-black text-xl font-medium w-full text-center py-2 hover:text-dark-violet ${itemClassName}` : 
+              `text-dark-violet text-xl font-medium w-full text-center py-2 hover:text-black ${itemClassName}` : 
               `text-sm md:text-[16px] leading-[24px] tracking-[-0.02em] ${itemClassName}`
             }
           `}

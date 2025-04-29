@@ -40,7 +40,7 @@ export default function Header() {
         {/* Navigation (Mobile only, Modal style) */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 z-50 bg-wh ite bg-opacity-30 backdrop-blur-sm"
+            className="fixed inset-0 z-50 bg-white bg-opacity-30 backdrop-blur-sm"
             onClick={toggleMenu}
           >
             <div
@@ -70,7 +70,7 @@ export default function Header() {
               <HorizontalNavigation
                 items={navItems}
                 className="flex flex-col items-center gap-8 w-full"
-                itemClassName="text-xl font-medium w-full text-center py-2 text-dark-violet hover:text-black"
+                itemClassName="text-xl font-medium w-full text-center py-2"
                 mobileMode={true}
               />
             </div>
