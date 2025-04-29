@@ -1,6 +1,6 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { virusData } from "../../src/data/virusData";
 import Header from "../components/Header";
 import Footer from "./Footer";
@@ -106,12 +106,12 @@ export default function PrepPage() {
               <p className="font-inter text-base font-light leading-relaxed text-gray-700">
                 {detail.treatmentSummary}
               </p>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-dark-violet text-base font-semibold mt-4 inline-block underline underline-offset-5"
               >
                 Start Now
-              </a>
+              </Link>
               <div
                 className={`${detail.bgGradient} mt-4 rounded-lg flex items-center justify-center`}
               >
