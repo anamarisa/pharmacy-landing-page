@@ -94,7 +94,7 @@ export default function HeroSection({ scrollToComparison }) {
         <div className="flex items-center h-[87px] overflow-hidden">
           <h2 className="font-manrope font-semibold text-ruby text-[64px] leading-[87px] flex">
             F*
-            <div className="w-[120px] ml-1">
+            <div className="w-[120px]">
               <Slider ref={keywordSliderRef} {...textSliderSettings}>
                 {textContent.map((item, index) => (
                   <div key={index}>

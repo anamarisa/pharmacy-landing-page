@@ -7,9 +7,9 @@ import SectionHeader from "./common/SectionHeader";
 
 export default function Testimonials() {
   const testimonialsRow1 = [
-    `F*** HIV, I don't have to go to CVS anymore, F* STI delivers to my doorstep discreetly.`,
+    `F*** HIV, I don't have to go to CVS anymore, F*STI delivers to my doorstep discreetly.`,
     `I referred my partner and he loved it, they don't judge and offer support for any condition.`,
-    `F* STI's program gave us the right guidance and support to overcome gonorrhea.`,
+    `F*STI's program gave us the right guidance and support to overcome gonorrhea.`,
   ];
 
   const testimonialsRow2 = [
@@ -74,7 +74,7 @@ export default function Testimonials() {
           />
           <p className="font-inter leading-relaxed">{text}</p>
         </div>
-        <p className="mt-4 font-inter italic">F* STI Patient</p>
+        <p className="mt-4 font-inter italic">F*STI Patient</p>
       </div>
     </div>
   );

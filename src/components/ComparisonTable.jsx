@@ -15,7 +15,7 @@ const features = [
     feature: "Accessibility",
     description: (
       <>
-        <strong>F* STI is in all 50 states.</strong> The availability and ease
+        <strong>F*STI is in all 50 states.</strong> The availability and ease
         of access for users to obtain services or products, including
         geographical reach and inclusivity for diverse demographics.
       </>
@@ -92,7 +92,7 @@ export default function ComparisonTable() {
           </span>
         </h3>
         <p className="font-inter text-[16px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 mx-auto max-w-2xl text-center">
-          Compare the features and benefits of F* STI against other providers,
+          Compare the features and benefits of F*STI against other providers,
           showcasing our commitment to fast, reliable, and user-friendly
           services.
         </p>
@@ -112,7 +112,7 @@ export default function ComparisonTable() {
               Features
             </div>
             <div className="basis-1/4 md:flex-1 p-3 flex items-center justify-center">
-              F* STI
+              F*STI
             </div>
             <div className="basis-1/4 md:flex-1 p-3 flex items-center justify-center">
               Others
@@ -150,7 +150,7 @@ export default function ComparisonTable() {
               <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
                   src={done}
-                  alt="Available in F* STI"
+                  alt="Available in F*STI"
                   className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
                 />
               </div>

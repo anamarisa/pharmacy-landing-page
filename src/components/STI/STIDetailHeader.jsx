@@ -5,7 +5,7 @@ export default function STIDetailHeader({ selected }) {
   return (
     <div className="font-manrope flex justify-between items-start xs:items-center gap-3 sm:gap-4">
       <h4 className="text-violet font-semibold text-2xl sm:text-3xl md:text-[30px] leading-[1.2] tracking-tight">
-        F* PrEP
+        F*PrEP
       </h4>
       <Link
         to={`/sti-awareness/${selected.toLowerCase()}`}
