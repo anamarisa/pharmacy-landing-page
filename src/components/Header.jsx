@@ -9,9 +9,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Blog", href: "/blog" },
     { label: "PrEP", href: "/" },
-    { label: "Education", href: "#" },
+    { label: "Blogs", href: "/blog" },
     { label: "Medications", href: "#" },
   ];
 
@@ -20,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full shadow-lg h-[72px] px-4 md:px-[64px] py-[20px] flex justify-between items-center bg-gradient-to-r from-[#1B15B0] via-[#0490DA] to-[#CDE300] z-100">
+    <header className="w-full shadow-lg h-[72px] px-4 md:px-[64px] py-[20px] flex justify-between items-center bg-ruby z-100">
       {/* Logo + Tagline */}
       <div className="flex items-center gap-3">
         <img
@@ -49,7 +48,7 @@ export default function Header() {
             >
               <button
                 onClick={toggleMenu}
-                className="absolute top-4 right-4 text-dark-violet hover:text-black"
+                className="absolute top-4 right-4 text-ruby hover:text-black"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +80,7 @@ export default function Header() {
         <HorizontalNavigation
           items={navItems}
           className="hidden md:flex"
-          itemClassName="text-white hover:opacity-80"
+          itemClassName="text-white hover:text-light-red"
         />
 
         {/* Cart + Login */}

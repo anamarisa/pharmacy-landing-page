@@ -107,14 +107,14 @@ export default function ComparisonTable() {
       <div className="overflow-x-auto max-w-[1090px] mx-auto">
         <div className="w-auto lg:min-w-[768px] border border-gray-300 rounded-xl overflow-hidden shadow-sm">
           {/* Header Row */}
-          <div className="flex bg-gray-100 font-inter font-medium text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] tracking-[-0.04em]">
-            <div className="basis-1/2 md:flex-[2] p-4 flex items-center justify-start md:justify-center">
+          <div className="flex bg-[#FAFAFA] font-inter font-medium text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] tracking-[-0.04em]">
+            <div className="basis-1/2 md:flex-[2] p-3 flex items-center justify-start md:justify-center">
               Features
             </div>
-            <div className="basis-1/4 md:flex-1 p-4 flex items-center justify-center">
+            <div className="basis-1/4 md:flex-1 p-3 flex items-center justify-center">
               F* STI
             </div>
-            <div className="basis-1/4 md:flex-1 p-4 flex items-center justify-center">
+            <div className="basis-1/4 md:flex-1 p-3 flex items-center justify-center">
               Others
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function ComparisonTable() {
               {/* F*STI Column */}
               <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
-                  src={cancel}
+                  src={done}
                   alt="Available in F* STI"
                   className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
                 />
@@ -158,7 +158,7 @@ export default function ComparisonTable() {
               {/* Others Column */}
               <div className="basis-1/4 md:flex-1 p-4 bg-white flex items-center justify-center lg:min-h-[130px]">
                 <img
-                  src={done}
+                  src={cancel}
                   alt="Not available in others"
                   className="w-6 h-6 lg:w-8 lg:h-8 object-contain"
                 />

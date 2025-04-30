@@ -65,7 +65,7 @@ export default function Testimonials() {
   // Fixed card dimensions
   const Card = ({ text }) => (
     <div className="px-2">
-      <div className="h-[300px] md:h-[246px] w-full text-sm md:text-[18px] flex flex-col justify-between bg-gradient-to-b from-[#7C3AED] to-[#2E1065] text-white p-6 rounded-xl shadow-md">
+      <div className="h-[300px] md:h-[246px] w-full text-sm md:text-[18px] flex flex-col justify-between bg-gradient-to-b from-[#64202B] to-ruby text-white p-6 rounded-xl shadow-md">
         <div>
           <img
             src={QuoteIcon}

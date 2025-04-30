@@ -71,9 +71,9 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="min-h-screen px-5 py-8 lg:p-[64px] mt-[152px] custom-gradient-bg flex flex-col justify-center">
+    <section className="min-h-screen px-5 py-8 lg:p-[64px] mt-[152px] bg-ruby text-white flex flex-col justify-center">
       {/* Heading at the very top */}
-      <h3 className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] text-gray-900 mb-3 text-center md:text-left">
+      <h3 className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] mb-3 text-center md:text-left">
         Fight STIs with Ease and Confidence
       </h3>
 
@@ -81,14 +81,14 @@ export default function PrivacyAccordion() {
         {/* Text Content Column */}
         <div className="order-1 md:order-1">
           <div className="flex flex-col">
-            <p className="font-inter text-[18px] sm:text-[18px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-gray-600 text-center md:text-left">
+            <p className="font-inter text-[18px] sm:text-[18px] md:text-[18px] leading-[24px] sm:leading-[26px] md:leading-[28px] tracking-[-0.03em] font-normal text-center md:text-left">
               Through our providers and your insurance, you have options to
               protect your health and control your future.
             </p>
 
             <ul className="space-y-0">
               {accordionItems.map((item, index) => (
-                <li key={index} className="border-b border-gray-border pb-4">
+                <li key={index} className="border-b border-gray-400 pb-4">
                   <button
                     onClick={() => toggleAccordion(index)}
                     className="w-full flex items-center text-left group pt-4 gap-2"
@@ -98,30 +98,20 @@ export default function PrivacyAccordion() {
                       <img
                         src={item.icon}
                         alt={item.alt}
-                        className={`w-6 h-6 sm:w-8 sm:h-8 object-contain transition-all duration-200 ${
-                          activeIndex === index
-                            ? "filter-violet"
-                            : "filter-black"
-                        }`}
+                        className="w-6 h-6 sm:w-8 sm:h-8 object-contain transition-all duration-200"
                       />
                     </div>
 
                     {/* Title and Toggle */}
                     <div className="flex-grow flex justify-between items-end">
-                      <span
-                        className={`font-semibold mt-4 text-xl sm:text-2xl md:text-2xl leading-snug tracking-tight transition-colors ${
-                          activeIndex === index
-                            ? "text-violet-600"
-                            : "text-black"
-                        }`}
-                      >
+                      <span className="font-semibold mt-4 text-xl sm:text-2xl md:text-2xl leading-snug tracking-tight transition-colors text-white">
                         {item.title}
                       </span>
                       <span
                         className={`text-2xl font-normal transition-all duration-200 ${
                           activeIndex === index
-                            ? "rotate-45 text-violet-600"
-                            : "rotate-0 text-black"
+                            ? "rotate-45 text-white"
+                            : "rotate-0 text-white"
                         }`}
                       >
                         +
@@ -134,7 +124,7 @@ export default function PrivacyAccordion() {
                       activeIndex === index
                         ? "max-h-[500px] opacity-100 mt-2"
                         : "max-h-0 opacity-0"
-                    } font-inter text-lg leading-[24px] tracking-[-0.02em] text-gray-700`}
+                    } font-inter text-lg leading-[24px] tracking-[-0.02em] text-white`}
                   >
                     <p className="pr-4">{item.content}</p>
                   </div>

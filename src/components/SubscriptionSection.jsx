@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import your local images
-import bg1 from "../assets/images/bg-images/bg1.svg";
-import bg2 from "../assets/images/bg-images/bg2.svg";
-import bg3 from "../assets/images/bg-images/bg3.svg";
+import bg1 from "../assets/images/bg-images/bg1.webp";
+import bg2 from "../assets/images/bg-images/bg2.webp";
+import bg3 from "../assets/images/bg-images/bg3.webp";
+import bg4 from "../assets/images/bg-images/bg4.webp";
 
-const backgroundImages = [bg1, bg2, bg3];
+const backgroundImages = [bg1, bg2, bg3, bg4];
 
 export default function SubscriptionSection() {
   const settings = {
@@ -67,7 +68,7 @@ export default function SubscriptionSection() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-[16px]"
               placeholder="name@domain.com"
             />
-            <button className="w-full cursor-pointer bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-[16px]">
+            <button className="w-full cursor-pointer bg-ruby hover:bg-[#64202B] text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-[16px]">
               Sign me up
             </button>
           </div>
@@ -91,7 +92,7 @@ export default function SubscriptionSection() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-violet-600 focus:border-transparent text-sm"
               placeholder="name@domain.com"
             />
-            <button className="w-full bg-purple-700 cursor-pointer hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
+            <button className="w-full bg-ruby cursor-pointer hover:bg-[#64202B] text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-md text-sm">
               Sign me up
             </button>
           </div>

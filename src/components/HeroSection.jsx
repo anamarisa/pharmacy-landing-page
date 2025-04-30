@@ -68,11 +68,11 @@ export default function HeroSection({ scrollToComparison }) {
   const textContent = [
     {
       keyword: "HIV",
-      subtitle: "Fight STIs, take control now.",
+      subtitle: "Fight HIV, protect lives everywhere.",
     },
     {
       keyword: "STI",
-      subtitle: "Fight HIV, protect lives everywhere.",
+      subtitle: "Fight STIs, take control now.",
     },
   ];
 
@@ -84,15 +84,15 @@ export default function HeroSection({ scrollToComparison }) {
       {/* Left Side Content */}
       <div className="w-full max-w-[500px] lg:max-w-none mx-auto lg:mx-0 lg:text-left flex flex-col justify-center lg:justify-center items-center lg:items-start py-8 lg:py-0">
         {/* Badge */}
-        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-[#F5F3FF] mb-4">
-          <p className="font-inter font-normal text-[12px] sm:text-[16px] leading-[24px] tracking-[-0.02em] sm:tracking-tighter text-[#6A31CE]">
+        <div className="inline-flex items-center rounded-[4px] p-[4px_12px] gap-1 border border-[#F5F3FF] bg-light-red mb-4">
+          <p className="font-inter font-normal text-[12px] sm:text-[16px] leading-[24px] tracking-[-0.02em] sm:tracking-tighter text-ruby">
             F HEALTH WORRIES, SAY HELLO TO GOOD HEALTH
           </p>
         </div>
 
         {/* Title with Sliding Word */}
         <div className="flex items-center h-[87px] overflow-hidden">
-          <h2 className="font-manrope font-semibold text-dark-violet text-[64px] leading-[87px] flex">
+          <h2 className="font-manrope font-semibold text-ruby text-[64px] leading-[87px] flex">
             F*
             <div className="w-[120px] ml-1">
               <Slider ref={keywordSliderRef} {...textSliderSettings}>

@@ -60,7 +60,7 @@ export default function PrepGuide() {
         {steps.map(([title, desc], i) => (
           <div
             key={i}
-            className="p-6 bg-white rounded-2xl transform transition-all duration-500 ease-in-out hover:scale-[1.02] hover:bg-gradient-to-b from-[#7C3AED] to-[#2E1065] hover:text-white cursor-pointer group hover:shadow-lg"
+            className="p-6 bg-white rounded-2xl transform transition-all duration-500 ease-in-out hover:scale-[1.02] hover:bg-gradient-to-b from-[#64202B] to-ruby hover:text-white cursor-pointer group hover:shadow-lg"
           >
             <div className="flex justify-center mb-4">
               <img
