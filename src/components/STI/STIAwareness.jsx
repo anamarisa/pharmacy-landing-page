@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import STIDetailCard from "./STIDetailCard";
 import { categoryDetails, categories } from "../../data/categoryDetails";
 import Slider from "react-slick";
@@ -22,6 +22,7 @@ export default function STIAwareness() {
   const [selected, setSelected] = useState(null);
   const [fadeIn, setFadeIn] = useState(false);
   const [hovered, setHovered] = useState(null);
+  const detailRef = useRef(null);
 
   const lottieAnimations = {
     HIV: hivAnimation,
@@ -88,6 +89,9 @@ export default function STIAwareness() {
       setTimeout(() => {
         setSelected(category);
         setFadeIn(true);
+        setTimeout(() => {
+          detailRef.current?.scrollIntoView({ behavior: "smooth" });
+        }, 50);
       }, 50);
     }
   };
@@ -273,6 +277,7 @@ export default function STIAwareness() {
       {/* Detail Card */}
       {selected && (
         <div
+          ref={detailRef}
           className={`transition-opacity duration-300 ease-out mt-6 ${
             fadeIn ? "opacity-100" : "opacity-0"
           }`}

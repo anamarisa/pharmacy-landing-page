@@ -13,7 +13,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "cursor-pointer w-[180px] bg-gradient-to-r from-ruby to-[#64202B] text-white shadow-md hover:opacity-90",
+      "cursor-pointer w-[180px] bg-gradient-to-b from-ruby to-[#64202B] text-white shadow-md hover:opacity-90",
     secondary: "w-[112px] bg-[#F5F3FF] text-ruby bg-light-red",
   };
 
