@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full shadow-lg h-[72px] px-4 md:px-[64px] py-[20px] flex justify-between items-center bg-ruby z-100">
+    <header className="fixed top-0 left-0 w-full shadow-lg h-[72px] px-4 md:px-[64px] py-[20px] flex justify-between items-center bg-ruby z-100">
       {/* Logo + Tagline */}
       <div className="flex items-center gap-3">
         <img
