@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <>
       <Header />
-      <div className="mt-24">
+      <div className="mt-20">
         <SectionHeader
           title="Understanding the Impact of Viruses on Health"
           subtitle={

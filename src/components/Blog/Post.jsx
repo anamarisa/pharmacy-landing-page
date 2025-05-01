@@ -444,7 +444,7 @@ const BlogPost = ({ cards = [] }) => {
   return (
     <>
       <Header />
-      <main className="font-inter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-8 lg:pt-12 pb-12">
+      <main className="font-inter max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 sm:pt-8 lg:pt-12 pb-12">
         {/* Meta and Title Section */}
         <div className="mb-6 sm:mb-8 lg:mb-10">
           <p className="text-gray-500 text-base sm:text-lg leading-6 sm:leading-[28px] tracking-[-0.02em] mb-2 sm:mb-3">
