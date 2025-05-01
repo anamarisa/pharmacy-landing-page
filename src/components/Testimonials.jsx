@@ -83,7 +83,7 @@ export default function Testimonials() {
     <div className="bg-white">
       {/* Desktop Version */}
       <div>
-        <div className="px-5 lg:pt-8 lg:px-[64px] mt-[80px] lg:mt-[152px]">
+        <div className="px-5 lg:pt-8 pt-20 lg:px-[64px] mt-[80px] lg:mt-[152px]">
           <SectionHeader
             layout="custom"
             title={
@@ -115,7 +115,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="hidden md:block py-4 w-full mx-auto">
+        <div className="hidden md:block py-4 lg:pb-20 w-full mx-auto">
           <div>
             <Slider {...settingsLeft}>
               {testimonialsRow1.map((text, i) => (

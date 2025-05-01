@@ -11,7 +11,7 @@ export default function Footer() {
 
   const simpleLinks = [
     { label: "PrEP", href: "/" },
-    { label: "Education", href: "#" },
+    { label: "Blogs", href: "/blog" },
     { label: "Medications", href: "#" },
     { label: "Login", href: "#" },
     { label: "Cart", href: "#" },

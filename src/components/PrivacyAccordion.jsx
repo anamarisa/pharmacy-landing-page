@@ -71,7 +71,7 @@ export default function PrivacyAccordion() {
   };
 
   return (
-    <section className="min-h-screen px-5 py-8 lg:p-[64px] mt-[152px] bg-ruby text-white flex flex-col justify-center">
+    <section className="min-h-screen px-5 p-20 lg:px-[64px] mt-[154px] bg-ruby text-white flex flex-col justify-center">
       {/* Heading at the very top */}
       <h3 className="font-manrope font-semibold text-[30px] sm:text-[32px] lg:text-[36px] leading-[38px] lg:leading-[46px] tracking-[-0.03em] mb-3 text-center md:text-left">
         Fight STIs with Ease and Confidence

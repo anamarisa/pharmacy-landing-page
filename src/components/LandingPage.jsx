@@ -13,6 +13,7 @@ import Testimonials from "./Testimonials";
 
 export default function LandingPage() {
   const comparisonRef = useRef(null);
+  const privacyRef = useRef(null);
 
   return (
     <>
@@ -21,10 +22,15 @@ export default function LandingPage() {
         scrollToComparison={() =>
           comparisonRef.current?.scrollIntoView({ behavior: "smooth" })
         }
+        scrollToPrivacy={() =>
+          privacyRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
       />
       <STIAwareness />
       <PrepGuide />
-      <PrivacyAccordion />
+      <div ref={privacyRef}>
+        <PrivacyAccordion />
+      </div>
       <MediaLogosSection />
       <div ref={comparisonRef}>
         <ComparisonTable />

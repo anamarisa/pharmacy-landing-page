@@ -13,7 +13,7 @@ export default function MediaLogosSection() {
   ];
 
   return (
-    <section className="bg-ruby px-5 py-8 h-max-[164px] mt-[152px]">
+    <section className="bg-ruby px-5 py-8 h-max-[164px] mt-[232px]">
       <div className="flex flex-wrap justify-center items-center gap-x-[50px] lg:gap-x-[50px] gap-y-[24px]">
         {mediaLogos.map((media, index) => (
           <div

@@ -7,7 +7,7 @@ export default function FooterNavigation({ items, className = "" }) {
       {items.map((item, index) => (
         <React.Fragment key={index}>
           <Link
-            href={item.href || "#"}
+            to={item.href || "#"}
             className="text-white font-normal text-[16px] leading-[24px] tracking-[-0.02em] transition whitespace-nowrap"
           >
             {item.label}

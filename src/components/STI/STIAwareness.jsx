@@ -66,7 +66,7 @@ export default function STIAwareness() {
   };
 
   return (
-    <section className="px-5 lg:px-[64px] mt-[152px]">
+    <section className="px-5 py-20 lg:px-[64px] mt-[152px]">
       {/* Desktop Header */}
       <SectionHeader
         layout="side-by-side"

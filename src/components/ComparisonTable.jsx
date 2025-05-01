@@ -82,7 +82,7 @@ const features = [
 
 export default function ComparisonTable() {
   return (
-    <section className="px-5 py-8 lg:px-[64px] mt-30 md:mt-[152px] mx-auto text-center">
+    <section className="px-5 py-20 lg:px-[64px] mt-30 md:mt-[152px] mx-auto text-center">
       {/* Section Heading */}
       <div className="mb-4">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">

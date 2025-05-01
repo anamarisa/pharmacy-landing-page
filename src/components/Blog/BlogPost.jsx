@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <>
       <Header />
-      <div className="mt-[60px]">
+      <div className="mt-24">
         <SectionHeader
           title="Understanding the Impact of Viruses on Health"
           subtitle={
@@ -24,7 +24,7 @@ const Blog = () => {
       </div>
 
       {/* Responsive grid layout */}
-      <div className="mx-[10px] md:mx-[40px] lg:mx-[119.5px] mt-13 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+      <div className="px-[10px] md:px-[40px] lg:px-[119.5px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <Card
             key={index}

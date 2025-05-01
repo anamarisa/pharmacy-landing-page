@@ -7,7 +7,7 @@ import SectionHeader from "./common/SectionHeader";
 
 export default function HeroesSection() {
   return (
-    <section className="relative h-svh lg:min-h-screen overflow-hidden bg-black flex flex-col items-center justify-center px-6 lg:px-16 mt-[152px]">
+    <section className="relative h-svh lg:min-h-screen overflow-hidden bg-black flex flex-col items-center justify-center px-6 py-20 lg:px-16 mt-[152px]">
       {/* Animated GIF Background */}
       <img
         src={bgEmerald}

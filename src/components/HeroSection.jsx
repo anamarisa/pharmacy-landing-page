@@ -13,7 +13,7 @@ import frame6 from "../assets/images/hero-images/frame6.webp";
 import frame7 from "../assets/images/hero-images/frame7.webp";
 import frame8 from "../assets/images/hero-images/frame8.webp";
 
-export default function HeroSection({ scrollToComparison }) {
+export default function HeroSection({ scrollToComparison, scrollToPrivacy }) {
   const keywordSliderRef = useRef(null);
   const subtitleSliderRef = useRef(null);
 
@@ -135,7 +135,7 @@ export default function HeroSection({ scrollToComparison }) {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Button onClick={scrollToComparison}>Get Started</Button>
-          <Button variant="secondary" className="hidden sm:flex">
+          <Button onClick={scrollToPrivacy} variant="secondary" className="hidden sm:flex">
             Why F*STI
           </Button>
         </div>
