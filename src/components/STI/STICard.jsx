@@ -76,21 +76,27 @@ export default function STICard({
         </div>
 
         {/* Back Side */}
-        <div
-          className={`absolute inset-0 backface-hidden rotate-y-180 ${animationStyle?.bgGradient} rounded-xl flex flex-col items-center justify-center text-center p-4 overflow-hidden`}
-        >
-          <div>
+        <div className="absolute bg-gradient-to-r from-[#475569] to-[#334155] inset-0 backface-hidden rotate-y-180 rounded-xl flex flex-col justify-between p-4 overflow-hidden">
+          <h4 className="text-[16px] p-2 md:text-lg font-manrope font-semibold leading-[32px] tracking-[-0.02em] text-white">
+            {category.name}
+          </h4>
+
+          {/* Description */}
+          <div className="flex-1 flex items-center justify-center">
+            <p className="font-inter px-2 line-clamp-3 text-white text-[16px] tracking-[-0.01em] leading-[22px] text-left">
+              {categoryDetails[category.name]?.description}
+            </p>
+          </div>
+
+          <div className="flex justify-end">
             <button
-              className="mt-2 font-inter text-red-300 text-[16px] tracking-[-0.02em] leading-[22px] transition"
+              className="mt-2 font-inter rounded-md text-white p-2 hover:bg-white hover:text-black text-[16px] tracking-[-0.02em] leading-[22px] transition"
               onClick={(e) => {
                 e.stopPropagation();
                 onSeeMore(category.name, e);
               }}
             >
-              <p className="font-inter text-white text-[16px] tracking-[-0.02em] leading-[22px] line-clamp-2">
-                {categoryDetails[category.name]?.description}
-              </p>
-              Detail...
+              Expand
             </button>
           </div>
         </div>
