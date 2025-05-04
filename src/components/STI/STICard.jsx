@@ -12,6 +12,8 @@ export default function STICard({
   onSeeMore,
 }) {
   const animationStyle = animationStyles[category.name];
+  const animation = lottieAnimations[category.name];
+  const isLottie = typeof animation === "object" && animation.v;
 
   return (
     <div
@@ -42,15 +44,28 @@ export default function STICard({
           <div className="flex-1 flex items-center justify-center ">
             {isHovered ? (
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
-                <Player
-                  autoplay
-                  loop
-                  src={lottieAnimations[category.name]}
-                  style={{
-                    width: animationStyle?.size?.width || "190px",
-                    height: animationStyle?.size?.height || "190px",
-                  }}
-                />
+                {isLottie ? (
+                  <Player
+                    autoplay
+                    loop
+                    src={animation}
+                    style={{
+                      width: animationStyle?.size?.width || "190px",
+                      height: animationStyle?.size?.height || "190px",
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={animation}
+                    alt={category.name}
+                    className=""
+                    style={{
+                      width: "180px",
+                      height: "120px",
+                      objectFit: "contain",
+                    }}
+                  />
+                )}
               </div>
             ) : (
               <img

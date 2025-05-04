@@ -1,8 +1,8 @@
 // src/data/animationConfig.js
 import hivAnimation from "../animations/hiv.json";
-import gonorheaAnimation from "../animations/gonorhea.json";
-import chlamydiaAnimation from "../animations/chlamydia.json";
-import syphilisAnimation from "../animations/syphilis.json";
+import gonorheaAnimation from "../animations/gonorhea.gif";
+import chlamydiaAnimation from "../animations/chlamydia.gif";
+import syphilisAnimation from "../animations/syphilis.gif";
 import genitalAnimation from "../animations/genital.json";
 import herpesAnimation from "../animations/herpes.json";
 import hpvAnimation from "../animations/hpv.json";
