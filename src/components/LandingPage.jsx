@@ -10,6 +10,7 @@ import PrivacyAccordion from "./PrivacyAccordion";
 import STIAwareness from "./STI/STIAwareness";
 import SubscriptionSection from "./SubscriptionSection";
 import Testimonials from "./Testimonials";
+import GetTestedSection from "./GetTested";
 
 export default function LandingPage() {
   const comparisonRef = useRef(null);
@@ -32,6 +33,7 @@ export default function LandingPage() {
         <PrivacyAccordion />
       </div>
       <MediaLogosSection />
+      <GetTestedSection />
       <div ref={comparisonRef}>
         <ComparisonTable />
       </div>
