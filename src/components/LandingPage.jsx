@@ -27,7 +27,7 @@ export default function LandingPage() {
           privacyRef.current?.scrollIntoView({ behavior: "smooth" })
         }
       />
-      <STIAwareness />
+      {/* <STIAwareness /> */}
       <PrepGuide />
       <div ref={privacyRef}>
         <PrivacyAccordion />

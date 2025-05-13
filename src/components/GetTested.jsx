@@ -31,11 +31,11 @@ export default function GetTestedSection() {
 
         {/* Info Cards */}
         <div className="space-y-4">
-          <InfoCard
+          {/* <InfoCard
             icon={<img src={Lightbulb} alt="" className="w-8 h-8" />}
             title="Why Are People Dropping Off?"
             content="Many users stop the process because they don’t want to go in person. But a lab test is mandatory — it’s not optional."
-          />
+          /> */}
           <InfoCard
             icon={<img src={ExclamationMark} alt="" className="w-8 h-8" />}
             title="Why This Matters"
